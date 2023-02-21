@@ -4,7 +4,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	
 const sections = [
    {
-	title: `Lista de Opciones`,
+	title: `Lista opzioni di 🆂🆄🅿🅴🆁 🅵🅰🅱🆁🅸 🅱🅾🆃
+`,
 	rows: [
 	{title: "WELCOME", rowId: `${usedPrefix + command} welcome`},
 	{title: "PÚBLICO", rowId: `${usedPrefix + command} public`},
