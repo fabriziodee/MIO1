@@ -25,17 +25,17 @@ let str = `┏─━─━─━∞◆∞━─━─━─┓
 │——————«•»——————
 │🔸️ ⚠️ᴀᴅᴠᴇʀᴛᴇɴᴄɪᴀs: ${warn}/${maxwarn}
 │——————«•»——————
-│🔸 ️💎 ᴅɪᴀᴍᴀɴᴛᴇs : ${diamond}
+│🔸 ️💎 TROIE SEDOTTE : ${diamond}
 │——————«•»——————
-│🔸 ️🆙 ɴɪᴠᴇʟ : ${level}
+│🔸 ️🆙 LIVELLO GANGSTA : ${level}
 │——————«•»——————
 │🔸 ️⬆️ xᴘ : ${exp}
 │——————«•»——————
-│🔸 ️🏆ʀᴀɴɢᴏ: ${role}
+│🔸 ️🏆ʀᴀɴɢᴏ CRIMINALE: ${role}
 │——————«•»——————
 │🔸 ️📇 ʀᴇɢɪsᴛʀᴀᴅᴏs : ${registered ? 'Si': 'No'}
 │——————«•»——————
-│🔸 ️⭐ ᴘʀᴇᴍɪᴜᴍ : ${prem ? 'Si' : 'No'}
+│🔸 ️⭐ CM MINCHIA : ${prem ? 'Si' : 'No'}
 ┗─━─━─━∞◆∞━─━─━─┛`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
