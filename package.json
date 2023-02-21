@@ -1,7 +1,7 @@
 { 
-    "name": "NovaBot-MD",
+    "name": "SuperFabriBot-MD",
     "version": "2.2.2",
-    "description": "Bot simple con pocos comando",
+    "description": "Bot semplice con pochi comandi",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/elrebelde21/NovaBot-MD",
+    "homepage": "https://github.com/fabriziodee/Nova.git",
     "author": {
-        "name": "elrebelde21"
+        "name": "fabriziodee"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/elrebelde21/NovaBot-MD.git"
+        "url": "git+https://github.com/fabriziodee/Nova.git"
     },
     "bugs": {
-        "url": "https://github.com/elrebelde21/NovaBot-MD/issues"
+        "url": "https://github.com/fabriziodee/Nova/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
