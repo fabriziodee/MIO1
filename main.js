@@ -162,14 +162,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ Hola @user ¿COMO ESTAS?😃\n┆——————«•»——————\n┆ Bienvenido A @subject\n┆——————«•»——————\n┆un gusto conocerte amig@ 🤗\n┆Recuerda leer las reglas del grupo \n┆para no tener ningun problema 🧐\n┆——————«•»——————\n┆descripción:\n┆@desc\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
-  conn.bye = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ adiós @user se fue\n┆ los llama sus tios😂\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
-  conn.spromote = '@user ahora eres admin del grupo'
-  conn.sdemote = '@user joderte ya no eres admin'
-  conn.sDesc = 'La descripción del grupo fue cambiada nueva descripción es\n@desc'
-  conn.sSubject = 'El nombre del grupo fue cambiado nuevos nombre es\n@subject'
-  conn.sIcon = 'la foto del grupo fue cambiada con éxito'
-  conn.sRevoke = 'nuevos link \n@revoke'
+  conn.welcome = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ Ciao @utente COME STAI?😃\n┆——————«•»——————\n┆ Benvenuto in @subject\n┆——————«•»————— —\n┆Piacere di conoscerti amico 🤗\n┆Ricordati di leggere le regole del gruppo \n┆così non avrai problemi 🧐\n┆——————«•»——————\ n┆descrizione :\n┆@desc\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
+  conn.bye = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ciao @user addio\n┆ lo/la chiamano i suoi zii😂\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
+  conn.spromote = '@user ora sei amministratore del gruppo'
+  conn.sdemote = '@user vaffanculo non sei più amministratore'
+  conn.sDesc = 'La descrizione del gruppo è stata modificata, la nuova descrizione è\n@desc'
+  conn.sSubject = 'Il nome del gruppo è stato cambiato, il nuovo nome è\n@subject'
+  conn.sIcon = 'la foto di gruppo è stata modificata con successo'
+  conn.sRevoke = 'nuovo link gp \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
