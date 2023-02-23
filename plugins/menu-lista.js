@@ -53,17 +53,13 @@ text: `~ HEYY ${taguser}*`, footer: `
 ┆□ 👥 *utente(i):* ${Object.keys(global.db.data.users).length} 
 ┆□ ♨️ *ᴍᴏᴅᴏ:* ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-┆💞 info sull utente 💞
-┆🔸️ 📱ɴᴜᴍᴇʀᴏ: ${PhoneNumber} 
-┆🔸 ️🔖 ɴᴏᴍʙʀᴇ: ${Name} 
-┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 ┆□ 👑 premium: ${user.premiumTime > 0 ? '✅' : '❌'}
 ┆□ ❇️ registrazione: ${registered ? '✅': '❎'}
 ┆□ 🎖️ livello: ${level}
 ┆□ 💎 diamanti: ${diamond}
 ┆□ 🧰 esperienza: ${exp}
 └────ׂ─ׂ─ׂ─ׂ─────
-*ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ✨*`, pp,
+*superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
 buttonText: "APRI IL MENU", 
 sections }
@@ -89,18 +85,18 @@ const readMore = more.repeat(4001)
 
 function ucapan() {
   const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
-  let res = `𝙱𝚄𝙴𝙽𝙾𝚂 𝙳𝙸𝙰𝚂 | 𝙶𝙾𝙾𝙳 𝙼𝙾𝚁𝙽𝙸𝙽𝙶`
+  let res = `OH BUON GIORNOO!`
   if (time >= 4) {
-    res = `𝙱𝚄𝙴𝙽𝙾𝚂 𝙳𝙸𝙰𝚂 | 𝙶𝙾𝙾𝙳 𝙼𝙾𝚁𝙽𝙸𝙽𝙶`
+    res = `OH BUON GIORNO!`
   }
   if (time >= 11) {
-    res = `𝙱𝚄𝙴𝙽𝙰𝚂 𝚃𝙰𝚁𝙳𝙴𝚂 | 𝙶𝙾𝙾𝙳 𝙴𝚅𝙴𝙽𝙸𝙽𝙶`
+    res = `OH BUON POMERIGGIO!`
   }
   if (time >= 15) {
-    res = `𝙱𝚄𝙴𝙽𝙰𝚂 𝚃𝙰𝚁𝙳𝙴𝚂 | 𝙶𝙾𝙾𝙳 𝙴𝚅𝙴𝙽𝙸𝙽𝙶`
+    res = `OH BUON SERA`
   }
   if (time >= 17) {
-    res = `𝙱𝚄𝙴𝙽𝙰𝚂 𝙽𝙾𝙲𝙷𝙴𝚂 | 𝙶𝙾𝙾𝙳 𝙽𝙸𝙶𝚃𝙷`
+    res = `OH BUONA NOTTE`
   }
   return res
 } 
