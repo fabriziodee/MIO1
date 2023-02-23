@@ -53,12 +53,6 @@ text: `~ HEYY ${taguser}*`, footer: `
 ┆□ 👥 *utente(i):* ${Object.keys(global.db.data.users).length} 
 ┆□ ♨️ *ᴍᴏᴅᴏ:* ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-┆□ 👑 premium: ${user.premiumTime > 0 ? '✅' : '❌'}
-┆□ ❇️ registrazione: ${registered ? '✅': '❎'}
-┆□ 🎖️ livello: ${level}
-┆□ 💎 diamanti: ${diamond}
-┆□ 🧰 esperienza: ${exp}
-└────ׂ─ׂ─ׂ─ׂ─────
 *superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
 buttonText: "APRI IL MENU", 
