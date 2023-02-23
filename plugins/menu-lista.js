@@ -54,7 +54,6 @@ text: `~ HEYY ${taguser}*`, footer: `
 ┆□ ♨️ *ᴍᴏᴅᴏ:* ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 ┆💞 info sull utente 💞
-┆text: `~ HEYY ${taguser}*`, footer:
 ┆🔸️ 📱ɴᴜᴍᴇʀᴏ: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 ┆🔸 ️🔖 ɴᴏᴍʙʀᴇ: ${name} ${user.registered === true ? 'ͧͧͧͦꙶͣͤ✓' : ''}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
