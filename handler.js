@@ -567,16 +567,16 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*✳️Questo comando lo può utilizzare solo il (rᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
-        owner: '*✳️Questo comando lo può utilizzare solo il (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
-        mods: '🔰Questo comando lo possono utilizzare solo admin e owner',
-        premium: '💠Questo comando è per membri premiun',
-        group: '⚙️¡Questo comando puoi utilizzarlo in un gruppo!',
-        private: '📮Questo comando puoi utilizzarlo in chat privata',
-        admin: '🛡️Questo comando è disponibile per soli admin',
-        botAdmin: '💥Devi dare admin al bot..',
-        unreg: '🔴Hey non sei registrato 🔴\nper utilizzare il bot devi registrarti:\n\n*/reg nombre.edad*',
-        restrict: '🔐 ahahah il comando è disattivato'
+        rowner: '*✳🌑Questo comando lo può utilizzare solo il (rᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        owner: '*✳🌑Questo comando lo può utilizzare solo il (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        mods: '🌑Questo comando lo possono utilizzare solo admin e owner',
+        premium: '🌑Questo comando è per membri premiun',
+        group: '⚙🌑¡Questo comando puoi utilizzarlo in un gruppo!',
+        private: '🌑Questo comando puoi utilizzarlo in chat privata',
+        admin: '🌑Questo comando è disponibile per soli admin',
+        botAdmin: '💥🌑Devi dare admin al bot..',
+        unreg: '🔴🌑Hey non sei registrato 🌑🔴\nper utilizzare il bot devi registrarti:\n\n*/reg nombre.edad*',
+        restrict: '🔐🌑 ahahah il comando è disattivato'
     }[type]
     if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', '.ok'] ], m)
 }
