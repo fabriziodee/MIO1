@@ -1,4 +1,3 @@
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
 import os from 'os'
 import util from 'util'
 import sizeFormatter from 'human-readable'
@@ -6,29 +5,34 @@ import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
 import { performance } from 'perf_hooks'
 let handler = async (m, { conn, usedPrefix }) => {
-let _muptime = process.uptime() * 1000
-let muptime = clockString(_uptime) 
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime) 
 let totalreg = Object.keys(global.db.data.users).length
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
 const groups = chats.filter(([id]) => id.endsWith('@g.us'))
 const used = process.memoryUsage()
-const { restrict, antiCall, antiprivado, modejadibot } = global.db.data.settings[conn.user.jid] || {}
-const { autoread, gconly, pconly, self } = global.opts || {}
+const { restrict } = global.db.data.settings[conn.user.jid] || {}
+const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
 let info = `
-╠➥ *Velocità* *${speed} ms* 
-╠➥⌛*HEY FRA SONO ATTIVO DA*.. *${muptime}*
-╠═〘 SuperFabri - 𝐁𝐨𝐭 〙 ═
-`.trim() 
-let aa = { quoted: m, userJid: conn.user.jid }
-conn.relayMessage(m.chat, res.message, {})
+  ͢   Il bot è attivo da:
+  ⏱️ ${uptime} ⏱ 
+  ͢   ah noto della velocità:
+ ${speed} `.trim() 
+conn.reply(m.chat, info, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
+title: 'PING',
+body: 'SuperFabriBot',         
+previewType: 0, thumbnail: fs.readFileSync("./),
+sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
 }
 handler.help = ['infobot', 'speed']
 handler.tags = ['info', 'tools']
 handler.command = /^(ping|speed|infobot)$/i
+handler.register = true
 export default handler
 
 function clockString(ms) {
