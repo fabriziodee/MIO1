@@ -15,13 +15,13 @@ let handler = async (m, { conn }) => {
          process.once('message', resolve)
          setTimeout(resolve, 1000)
        }) * 1000
-    }
     let muptime = clockString(_muptime)	
+    
      m.reply(`*⌛HEY FRA SONO ATTIVO DA..  \n\n${muptime}`)
      m.reply(`${ssd}🚀 *AH MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)} _ms_`);
             });
 }
-handler.help = ['ping', 'runtime']
+handler.help = ['ping']
 handler.tags = ['main']
 handler.command = ['ping', 'speed']
 handler.register = true
