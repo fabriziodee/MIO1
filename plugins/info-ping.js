@@ -2,7 +2,7 @@
 import speed from 'performance-now'
 import { spawn, exec, execSync } from 'child_process'
 
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, args, usedPrefix, command }) => {
          let timestamp = speed();
          let latensi = speed() - timestamp;
          exec(`neofetch --stdout`, (error, stdout, stderr) => {
