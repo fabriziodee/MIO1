@@ -1,7 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
  {await m.reply('⌛ _Cargando..._\n▰▰▰▱▱▱▱▱▱')}
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '*[❗] ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏs ʜᴀ sɪᴅᴏ ʙᴀɴᴇᴀᴅᴏs sɪ ᴅᴇsᴇᴀ ᴀᴄᴛɪᴠᴀʀʟᴏs ᴛɪᴇɴᴇ ǫᴜᴇ sᴇʀ ᴜɴ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ /ᴇɴᴀʙʟᴇ ᴍᴏᴅᴏʜᴏʀɴʏ*'
 let url = packgirl[Math.floor(Math.random() * packgirl.length)]
 conn.sendButton(m.chat, `_🥵 Pack 2 🥵_`, author, url, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], m)
 }
