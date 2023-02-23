@@ -25,7 +25,6 @@ handler.help = ['ping']
 handler.tags = ['main']
 handler.command = ['ping', 'speed']
 handler.register = true
-
 export default handler
 
 function clockString(ms) {
