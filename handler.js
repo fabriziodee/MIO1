@@ -150,7 +150,7 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
+                if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false
                 if (!('status' in settings)) settings.status = 0
             } else global.db.data.settings[this.user.jid] = {
@@ -499,11 +499,11 @@ this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ?
             break
         case 'promote':
         case 'promover':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
+            text = (chat.sPromote || this.spromote || conn.spromote || '@user ora è amministratore')
         case 'demote':
         case 'degradar':
             if (!text)
-                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
+                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user non più amministratore')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)
                 this.sendMessage(id, { text, mentions: this.parseMention(text) })
@@ -523,10 +523,10 @@ export async function groupsUpdate(groupsUpdate) {
         if (!id) continue
         let chats = global.db.data.chats[id], text = ''
         if (!chats?.detect) continue
-        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || 'Descripción cambiada a \n@desc').replace('@desc', groupUpdate.desc)
-        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || 'El nombre del grupo cambió a \n@group').replace('@subject', groupUpdate.subject)
-        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || 'El icono del grupo cambió a').replace('@icon', groupUpdate.icon)
-        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || 'El enlace del grupo cambia a\n@revoke').replace('@revoke', groupUpdate.revoke)
+        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || 'Descrizione modificata in \n@desc').replace('@desc', groupUpdate.desc)
+        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || 'Il nome del gruppo è cambiato in \n@group').replace('@subject', groupUpdate.subject)
+        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || 'L icona del gruppo è cambiata in').replace('@icon', groupUpdate.icon)
+        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || 'Il link del gruppo cambia in\n@revoke').replace('@revoke', groupUpdate.revoke)
         if (!text) continue
         await this.sendMessage(id, { text, mentions: this.parseMention(text) })
     }
@@ -545,14 +545,14 @@ export async function deleteUpdate(message) {
             return
         await this.reply(msg.chat, `
 ╭━─━─━─≪🔴≫─━─━─━╮
-│ 🤨 ʙᴏʀʀᴏ ᴜɴ ᴍᴇɴsᴀᴊᴇ 🤨
+│ 🤨 Cancello un msg 🤨
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 │ 🔴 ᴀɴᴛɪ ᴅᴇʟᴇᴛᴇ 🔴
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 │🔸️ *ɴᴏᴍʙʀᴇ :* @${participant.split`@`[0]} 
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│🔸ᴘᴀʀᴀ ᴅᴇsᴀᴄᴛɪᴠᴀʀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴ, 
-│🔸️ᴇsᴄʀɪʙɪ 
+│🔸ᴘer disattivare questa opzione, 
+│🔸️scrivi 
 │/off antidelete
 │#enable delete
 ╰━─━─━─≪🔴≫─━─━─━╯
@@ -567,16 +567,16 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*✳️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ʟᴏs ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ᴘʀᴏᴘɪᴇᴛᴀʀɪᴏ (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
-        owner: '*✳️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ʟᴏs ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ᴘʀᴏᴘɪᴇᴛᴀʀɪᴏ (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
-        mods: '🔰ᴇsᴛᴀ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴇs ᴘᴀʀᴀ ᴍᴏᴅᴇʀᴀᴛᴏʀ ʏ ᴏᴡɴᴇʀ ᴅᴇʟ ʙᴏᴛ',
-        premium: '💠ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇs sᴏʟᴏ ᴘᴀʀᴀ ᴍɪᴇᴍʙʀᴏs ᴘʀᴇᴍɪᴜᴍ',
-        group: '⚙️¡ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ sᴇ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ɢʀᴜᴘᴏs!',
-        private: '📮ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ sᴇ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴀʟ ᴄʜᴀᴛ ᴘʀɪᴠᴀᴅᴏ ᴅᴇʟ ʙᴏᴛ',
-        admin: '🛡️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴇs ᴘᴀʀᴀ ᴀᴅᴍɪɴ ᴅᴇʟ ɢʀᴜᴘᴏ',
-        botAdmin: '💥¡ᴘᴀʀᴀ ᴜsᴀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴘʀɪᴍᴇʀᴏ ᴇʟ ʙᴏᴛ (ʏᴏ) ɴᴇᴄᴇsɪᴛᴀ sᴇʀ ᴀᴅᴍɪɴ ᴅᴇʟ ɢʀᴜᴘᴏ!*',
-        unreg: '🔴ʜᴇʏ ᴀʟᴛᴏ ɴᴏ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ 🔴\nᴘᴀʀᴀ ᴘᴏᴅᴇʀ ᴜsᴀʀ ᴇʟ ʙᴏᴛ ɴᴇᴄᴇsɪᴛᴀ ʀᴇɢɪsᴛʀᴀʀᴛᴇ:\n\n*/reg nombre.edad*',
-        restrict: '🔐 ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇsᴛᴀ ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴏ'
+        rowner: '*✳️Questo comando lo può utilizzare solo il (rᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        owner: '*✳️Questo comando lo può utilizzare solo il (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        mods: '🔰Questo comando lo possono utilizzare solo admin e owner',
+        premium: '💠Questo comando è per membri premiun',
+        group: '⚙️¡Questo comando puoi utilizzarlo in un gruppo!',
+        private: '📮Questo comando puoi utilizzarlo in chat privata',
+        admin: '🛡️Questo comando è disponibile per soli admin',
+        botAdmin: '💥Devi dare admin al bot..',
+        unreg: '🔴Hey non sei registrato 🔴\nper utilizzare il bot devi registrarti:\n\n*/reg nombre.edad*',
+        restrict: '🔐 ahahah il comando è disattivato'
     }[type]
     if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', '.ok'] ], m)
 }
