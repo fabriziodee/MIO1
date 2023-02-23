@@ -35,7 +35,7 @@ const defaultMenu = {
 ║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 informazioni 」═══╗
+╔═「 informazioni 」═╗
 ║║◤━━☆. ∆ .☆ ━━◥
 ║ Il bot è in fase di programmazione,
 ║ tuttavia, se si presentasse qualsiasi problema,
@@ -46,9 +46,9 @@ const defaultMenu = {
 ║║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 `.trimStart(),
-  header: '╔═════ %category ═════╗ ',
+  header: '╔═%category═╗ ',
   body: '║ %cmd %isdiamond %isPremium',
-  footer: '╚════ ≪ •❈• ≫ ════╝\n',
+  footer: '╚═≪ •❈• ≫═╝\n',
   after: `
 `,
 }
