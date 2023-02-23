@@ -6,12 +6,12 @@ const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadm
 
 let text = `
 ╔══✪〘 *sᴛᴀғғ* 〙✪══
-╠ ɪɴᴠᴏᴄᴀɴᴅᴏ ᴀᴅᴍɪɴs:
-╠ ➥ ɢʀᴜᴘᴏs _${groupMetadata.subject}_
+╠ RICHIAMANDO ADMIN:
+╠ ➥ GRUPPO _${groupMetadata.subject}_
 ╠  ᴀᴅᴍɪɴs
 ╠ 🔸️ ${listAdmin}
-╚═〘 _*NovaBot-MD*_ 〙
-[ ⚠ ️] ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴄᴜᴀɴᴅᴏ sᴇ ᴛʀᴀᴛᴇ ᴅᴇ ᴜɴᴀ ᴇᴍᴇʀɢᴇɴᴄɪᴀ
+╚═〘 _*SuperFabriBot-MD*_ 〙
+[ ⚠ ️] Usa questo comando se si tratta di un emergenza.
 `.trim()
 conn.sendFile(m.chat, pp, 'staff.png', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
