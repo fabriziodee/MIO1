@@ -1,43 +1,18 @@
-import os from 'os'
-import util from 'util'
-import sizeFormatter from 'human-readable'
-import MessageType from '@adiwajshing/baileys'
-import fs from 'fs'
-import { performance } from 'perf_hooks'
-let handler = async (m, { conn, usedPrefix }) => {
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime) 
-let totalreg = Object.keys(global.db.data.users).length
-const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
-const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
-const groups = chats.filter(([id]) => id.endsWith('@g.us'))
-const used = process.memoryUsage()
-const { restrict } = global.db.data.settings[conn.user.jid] || {}
-const { autoread } = global.opts
-let old = performance.now()
-let neww = performance.now()
-let speed = neww - old
-let info = `
-  ͢   Il bot è attivo da:
-  ⏱️ ${uptime} ⏱ 
-  ͢   ah noto della velocità:
- ${speed} `.trim() 
-conn.reply(m.chat, info, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: 'PING',
-body: 'SuperFabriBot',         
-previewType: 0, thumbnail: fs.readFileSync("./),
-sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
-}
-handler.help = ['infobot', 'speed']
-handler.tags = ['info', 'tools']
-handler.command = /^(ping|speed|infobot)$/i
-handler.register = true
-export default handler
+import speed from 'performance-now'
+import { spawn, exec, execSync } from 'child_process'
 
-function clockString(ms) {
-let h = Math.floor(ms / 3600000)
-let m = Math.floor(ms / 60000) % 60
-let s = Math.floor(ms / 1000) % 60
-console.log({ms,h,m,s})
-return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')}
+let handler = async (m, { conn }) => {
+         let timestamp = speed();
+         let latensi = speed() - timestamp;
+         exec(`neofetch --stdout`, (error, stdout, stderr) => {
+          let child = stdout.toString("utf-8");
+          let ssd = child.replace(/Memory:/, "Ram:");
+          m.reply(`${ssd}🚀 *AH MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)} _ms_*WOW CHE VELOCITA*`);
+            });
+}
+handler.help = ['ping']
+handler.tags = ['main']
+handler.command = ['ping', 'speed', 'p']
+handler.register = true
+
+export default handler
