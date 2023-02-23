@@ -1,9 +1,10 @@
 let handler = async (m, { conn, isAdmin }) => {
   if (m.fromMe) throw 'Nggk'
-  if (isAdmin) throw '*AHORA ERES ADMIN MI CREADOR(A) 😀*'
-  await conn.groupParticipantsUpdate(m.chat, [m.sender], "promote")
+  if (isAdmin) throw '*ORA SEI AMMINISTRATORE😀*'
+  await conn.groupParticipantsUpdate(m.chat, [m.sender], "promuovere")
 }
 handler.command = /^admin.|atad|autoadmin$/i
 handler.rowner = true
-handler.botAdmin = true
+handler.owner = true 
+handler.botAdmin = false
 export default handler
