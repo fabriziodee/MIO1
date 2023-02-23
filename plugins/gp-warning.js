@@ -37,7 +37,6 @@ handler.help = ['warn @user']
 handler.tags = ['group']
 handler.command = ['warn'] 
 handler.group = true
-handler.admin = true
 handler.owner = true
 handler.botAdmin = true
 handler.register = true
