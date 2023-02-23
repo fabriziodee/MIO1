@@ -1,11 +1,11 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `❗𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝚃𝙴𝚇𝚃𝙾 𝙿𝙰𝚁𝙰 𝙲𝚁𝙴𝙰𝚁 𝚄𝙽𝙰 𝙸𝙼𝙰𝙶𝙴𝙽 𝚈 𝙰𝚂𝙸 𝚄𝚂𝙰𝚁 𝙻𝙰 𝙵𝚄𝙽𝙲𝙸𝙾𝙽 𝙳𝙴 𝙳𝙰𝙻𝙻-𝙴*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾𝚂 𝙳𝙴 𝙿𝙴𝚃𝙸𝙲𝙸𝙾𝙽𝙴𝚂*\n*◉ ${usedPrefix + command} gatitos llorando*\n*◉ ${usedPrefix + command} hatsune miku beso*`
+if (!text) throw `❗INSERISCI UN TESTO PER CREARE UN IMMAGINE DALL INTELLIGENZA ARTIFICIALIE*\n\n*—◉ ESEMPI DI COMANDI*\n*◉ ${usedPrefix + command} GATTINI CHE PIANGONO*\n*◉ ${usedPrefix + command} Cr7 piange su Cassano*`
 try {
-m.reply('*[❗] Aguarde un momento [❗]*')
+m.reply('*[❗] Aspetta un momento [❗]*')
 let tiores = await conn.getFile(`https://api.lolhuman.xyz/api/dall-e?apikey=${lolkeysapi}&text=${text}`)
 await conn.sendFile(m.chat, tiores.data, null, null, m)
 } catch {
-throw `*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*`
+throw `*[❗] errore non è nelle mie capacita inventare cose simili, riprova con meno dati*`
 }}
 handler.command = ['dall-e', 'dalle', 'ia2', 'cimg', 'openai2']
 export default handler
