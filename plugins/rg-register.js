@@ -7,50 +7,50 @@ let handler = async function (m, { text, usedPrefix, command }) {
 	let namae = conn.getName(m.sender)
 	const sections = [
 	{
-	title: "SELECCIONA TU EDAD AQUI!",
+	title: "SELEZIONA QUI LA TUA ETÀ!",
 	rows: [
-	    {title: "Años Random", rowId: '.reg ' + namae + '.' + pickRandom(['30','29','28','27','26','25','24','23','22','21','20','19','18','17','16','15','14','13','12','11','10','9'])}
+	    {title: "Anni casuali", rowId: '.reg ' + namae + '.' + pickRandom(['30','29','28','27','26','25','24','23','22','21','20','19','18','17','16','15','14','13','12','11','10','9'])}
 	]
     },
     {
 	title: "ADULTO",
 	rows: [
-	    {title: "30 Años", rowId: '.reg ' + namae + '.30 '},
-	    {title: "29 Años", rowId: '.reg ' + namae + '.29 '},
-	    {title: "28 Años", rowId: '.reg ' + namae + '.28 '},
-	{title: "27 Años", rowId: '.reg ' + namae + '.27 '},
-	{title: "26 Años", rowId: '.reg ' + namae + '.26 '},
-	{title: "25 Años", rowId: '.reg ' + namae + '.25 '},
-	{title: "24 Años", rowId: '.reg ' + namae + '.24 '},
-	{title: "23 Años", rowId: '.reg ' + namae + '.23 '},
-	{title: "22 Años", rowId: '.reg ' + namae + '.22 '},
-	{title: "21 Años", rowId: '.reg ' + namae + '.21 '}
+	    {title: "30 Anni", rowId: '.reg ' + namae + '.30 '},
+	    {title: "29 Anni", rowId: '.reg ' + namae + '.29 '},
+	    {title: "28 Anni", rowId: '.reg ' + namae + '.28 '},
+	{title: "27 Anni", rowId: '.reg ' + namae + '.27 '},
+	{title: "26 Anni", rowId: '.reg ' + namae + '.26 '},
+	{title: "25 Anni", rowId: '.reg ' + namae + '.25 '},
+	{title: "24 Anni", rowId: '.reg ' + namae + '.24 '},
+	{title: "23 Anni", rowId: '.reg ' + namae + '.23 '},
+	{title: "22 Anni", rowId: '.reg ' + namae + '.22 '},
+	{title: "21 Anni", rowId: '.reg ' + namae + '.21 '}
 	]
     },
     {
-	title: "JOVEN",
+	title: "Ragazzo",
 	rows: [
-	    {title: "20 Años", rowId: '.reg ' + namae + '.20 '},
-	    {title: "19 Años", rowId: '.reg ' + namae + '.19 '},
-	    {title: "18 Años", rowId: '.reg ' + namae + '.18 '},
-	{title: "17 Años", rowId: '.reg ' + namae + '.17 '},
-	{title: "16 Años", rowId: '.reg ' + namae + '.16 '},
-	{title: "15 Años", rowId: '.reg ' + namae + '.15 '},
-	{title: "14 Años", rowId: '.reg ' + namae + '.14 '},
-	{title: "13 Años", rowId: '.reg ' + namae + '.13 '},
-	{title: "12 Años", rowId: '.reg ' + namae + '.12 '},
-	{title: "11 Años", rowId: '.reg ' + namae + '.11 '},
-	{title: "10 Años", rowId: '.reg ' + namae + '.10 '},
-	{title: "9 Años", rowId: '.reg ' + namae + '.9 '}
+	    {title: "20 Anni", rowId: '.reg ' + namae + '.20 '},
+	    {title: "19 Anni", rowId: '.reg ' + namae + '.19 '},
+	    {title: "18 Anni", rowId: '.reg ' + namae + '.18 '},
+	{title: "17 Anni", rowId: '.reg ' + namae + '.17 '},
+	{title: "16 Anni", rowId: '.reg ' + namae + '.16 '},
+	{title: "15 Anni", rowId: '.reg ' + namae + '.15 '},
+	{title: "14 Anni", rowId: '.reg ' + namae + '.14 '},
+	{title: "13 Anni", rowId: '.reg ' + namae + '.13 '},
+	{title: "12 Anni", rowId: '.reg ' + namae + '.12 '},
+	{title: "11 Anni", rowId: '.reg ' + namae + '.11 '},
+	{title: "10 Anni", rowId: '.reg ' + namae + '.10 '},
+	{title: "9 Anni", rowId: '.reg ' + namae + '.9 '}
 	]
     },
 ]
 
 const listMessage = {
-  text: `┆ᴘᴏʀ ғᴀᴠᴏʀ sᴇʟᴇᴄᴄɪᴏɴᴀ ᴛᴜ ᴇᴅᴀᴅ ᴘᴜʟsᴀɴᴅᴏ ᴇʟ ʙᴏᴛᴏɴ...\n┆ᴛᴜ ɴᴏᴍʙʀᴇ: ${conn.getName(m.sender)}\n┆ǫᴜɪᴇʀᴇs ᴘᴏɴᴇʀ ᴏᴛʀᴏ ᴍᴏᴍʙʀᴇ?\n┆ᴇsᴄʀɪʙɪ *${usedPrefix + command} Nombre.Años*\n╰──────•◈•───────╯`,
+  text: `┆per favore seleziona la tua età dal bottone...\n┆il tuo nome: ${conn.getName(m.sender)}\n┆desideri selezionare un'altro nome?\n┆scrivi *${usedPrefix + command} Nome.Anni*\n╰──────•◈•───────╯`,
   footer: global.wm,
   title: "╭──────• ʀᴇɢɪsᴛʀᴏ •──────╮",
-  buttonText: "Pulsa Aqui!",
+  buttonText: "Schiaccia qui!",
   sections
 }
 
