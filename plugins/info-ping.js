@@ -1,39 +1,39 @@
-
-import speed from 'performance-now'
-import { spawn, exec, execSync } from 'child_process'
-
-let handler = async (m, { conn }) => 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-         let timestamp = speed();
-         let latensi = speed() - timestamp;
-         exec(`neofetch --stdout`, (error, stdout, stderr) => {
-          let child = stdout.toString("utf-8");
-          let ssd = child.replace(/Memory:/, "Ram:");
-                  
-          (`${ssd}🚀 *VELOCITA* : ${latensi.toFixed(4)} _ms_`);
-          (`*⌛HEY FRA SONO ATTIVO DA..  \n\n${muptime}`);
-                  
-         let _muptime
-    if (process.send) {
-      process.send('uptime')
-      _muptime = await new Promise(resolve => {
-        process.once('message', resolve)
-        setTimeout(resolve, 1000)
-      }) * 1000
-    }
-    let muptime = clockString(_muptime)
+import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+import os from 'os'
+import util from 'util'
+import sizeFormatter from 'human-readable'
+import MessageType from '@adiwajshing/baileys'
+import fs from 'fs'
+import { performance } from 'perf_hooks'
+let handler = async (m, { conn, usedPrefix }) => {
+let _muptime = process.uptime() * 1000
+let muptime = clockString(_uptime) 
+let totalreg = Object.keys(global.db.data.users).length
+const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
+const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
+const groups = chats.filter(([id]) => id.endsWith('@g.us'))
+const used = process.memoryUsage()
+const { restrict, antiCall, antiprivado, modejadibot } = global.db.data.settings[conn.user.jid] || {}
+const { autoread, gconly, pconly, self } = global.opts || {}
+let old = performance.now()
+let neww = performance.now()
+let speed = neww - old
+let info = `
+╠➥ *Velocità* *${speed} ms* 
+╠➥⌛*HEY FRA SONO ATTIVO DA*.. *${muptime}*
+╠═〘 SuperFabri - 𝐁𝐨𝐭 〙 ═
+`.trim() 
+let aa = { quoted: m, userJid: conn.user.jid }
+conn.relayMessage(m.chat, res.message, {})
 }
-handler.help = ['ping']
-handler.tags = ['main']
-handler.command = ['ping', 'speed']
-handler.register = true
-
+handler.help = ['infobot', 'speed']
+handler.tags = ['info', 'tools']
+handler.command = /^(ping|speed|infobot)$/i
 export default handler
 
 function clockString(ms) {
-  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' dias ', h, ' hs ', m, ' min ', s, ' seg '].map(v => v.toString().padStart(2, 0)).join('')
-}
+let h = Math.floor(ms / 3600000)
+let m = Math.floor(ms / 60000) % 60
+let s = Math.floor(ms / 1000) % 60
+console.log({ms,h,m,s})
+return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')}
