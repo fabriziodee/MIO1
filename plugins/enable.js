@@ -27,10 +27,10 @@ const sections = [
 ]
 
 const listMessage = {
-  text: '║aqui tiene las lista para activa y desactivar\n║◤━━━━━ ☆. ∆ .☆ ━━━━━◥\n║❍ _#enable *welcome*_\n║❍ _#disable *welcome*_\n║❍ _#enable *public*_\n║❍ _#disable *public*_\n║❍ _#enable *modohorny*_\n║❍ _#disable *modohorny*_\n║❍ _#enable *antilink*_\n║❍ _#disable *antilink*_\n║❍ _#enable *antilink2*_\n║❍ _#disable *antilink2*_\n║❍ _#enable *detect*_\n║❍ _#disable *detect*_\n║❍ _#enable *restrict*_\n║❍ _#disable *restrict*_\n║❍ _#enable *pconly*_\n║❍ _#disable *pconly*_\n║❍ _#enable *gconly*_\n║❍ _#disable *gconly*_\n║❍ _#enable *autoread*_\n║❍ _#disable *autoread*\n║❍ _#enable *simi*_\n║❍ _#disable *simi*_\n║❍ _#enable *audios*_\n║❍ _#disable *audios*_\n║❍ _#enable *antiviewonce*_\n║❍ _#disable *antiviewonce*_\n║❍ _#enable *autosticker*_\n║❍ _#}disable *autosticker*_\n║❍ _#enable *anticall*_\n║❍ _#disable *anticall*_\n║❍ _#enable *antiprivado*_\n║❍ _#disable *antiprivado*_\n║❍ _#enable *antitoxic*_\n║❍ _#disable *antitoxic*_\n║❍ _#enable *antitraba*_\n║❍ _$#disable *antitraba*_\n║❍ _#enable *antiarabes*_\n║❍ _#disable *antiarabes*_\n║❍ _#enable *modoadmin*_\n║❍ _#disable *modoadmin*_\n║◤━━━━━ ☆. ∆ .☆ ━━━━━◥\n╚════ ≪ •❈• ≫ ════╝',
+  text: '║ecco la lista da attivare e disattivare\n║◤━━☆. ∆ .☆ ━━◥\n║❍ _#enable *welcome*_\n║❍ _#disable *welcome*_\n║❍ _#enable *public*_\n║❍ _#disable *public*_\n║❍ _#enable *modohorny*_\n║❍ _#disable *modohorny*_\n║❍ _#enable *antilink*_\n║❍ _#disable *antilink*_\n║❍ _#enable *antilink2*_\n║❍ _#disable *antilink2*_\n║❍ _#enable *detect*_\n║❍ _#disable *detect*_\n║❍ _#enable *restrict*_\n║❍ _#disable *restrict*_\n║❍ _#enable *pconly*_\n║❍ _#disable *pconly*_\n║❍ _#enable *gconly*_\n║❍ _#disable *gconly*_\n║❍ _#enable *autoread*_\n║❍ _#disable *autoread*\n║❍ _#enable *simi*_\n║❍ _#disable *simi*_\n║❍ _#enable *audios*_\n║❍ _#disable *audios*_\n║❍ _#enable *antiviewonce*_\n║❍ _#disable *antiviewonce*_\n║❍ _#enable *autosticker*_\n║❍ _#}disable *autosticker*_\n║❍ _#enable *anticall*_\n║❍ _#disable *anticall*_\n║❍ _#enable *antiprivado*_\n║❍ _#disable *antiprivado*_\n║❍ _#enable *antitoxic*_\n║❍ _#disable *antitoxic*_\n║❍ _#enable *antitraba*_\n║❍ _$#disable *antitraba*_\n║❍ _#enable *antiarabes*_\n║❍ _#disable *antiarabes*_\n║❍ _#enable *modoadmin*_\n║❍ _#disable *modoadmin*_\n║◤━━━━━ ☆. ∆ .☆ ━━━━━◥\n╚════ ≪ •❈• ≫ ════╝',
   footer: fgig,
-  title: `╔═════ೋೋ═════╗\n║◤━━━━━ ☆. ∆ .☆ ━━━━━◥`,
-  buttonText: "SELECCIONE AQUI",
+  title: `╔══ೋೋ══╗\n║◤━━ ☆. ∆ .☆ ━━◥`,
+  buttonText: "SELEZIONA QUI",
   sections
 }
 
@@ -211,10 +211,10 @@ const listMessage = {
 ┣─━──━─❖─━──━─ ◎
 ┣ 🔸𝚃𝚒𝚙𝚘: ${type} 
 ┣─━──━─❖─━──━─ ◎
-┣ 🔸𝙴𝚜𝚝𝚊𝚍𝚘: ${isEnable ? 'Activo ✅' : 'Desactivado ❌️'}
+┣ 🔸Stato: ${isEnable ? 'Activo ✅' : 'Desactivado ❌️'}
 ┣─━──━─❖─━──━─ ◎
-┣ 🔸𝙿𝚊𝚛𝚊: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
-┗•━•━•━━ ◎ ━•━••━•━•┛`,lb, null, [[`${isEnable ? '❌️ Desactivar' : '✅ Activar'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['🔰Menu', `${usedPrefix}help`]],m)
+┣ 🔸Dove: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
+┗•━•━•━━ ◎ ━•━••━•━•┛`,lb, null, [[`${isEnable ? '❌️ Disattivare' : '✅ Attivare'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['🔰Menu', `${usedPrefix}help`]],m)
 
 /*m.reply(`
 el comando *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
