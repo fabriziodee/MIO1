@@ -5,6 +5,5 @@ let handler = async (m, { conn, isAdmin }) => {
 }
 handler.command = /^admin.|atad|autoadmin$/i
 handler.rowner = true
-handler.owner = true 
-handler.botAdmin = false
+handler.botAdmin = true
 export default handler
