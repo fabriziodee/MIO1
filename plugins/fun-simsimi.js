@@ -1,20 +1,18 @@
 import fetch from 'node-fetch'
-
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-	
- let name = conn.getName(m.sender)
-  if (!text) throw `hey👋 *${name}* Vuoi parlare un po con me? usa in questo modo \n\nEsempio : *${usedPrefix + command}* Ciao bot`
-  m.react('🗣️') 
-  await conn.sendPresenceUpdate('composing', m.chat)
-  //let res = await fetch(global.API('https://api.simsimi.vn', '/v2/', { text: encodeURIComponent(m.text), lc: "it" }, ''))
-  let res = await fetch(`https://api.simsimi.vn/v2/?text=${text}&lc=it`)
-  let json = await res.json()
-  if (json.success) m.reply(json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux'))
-  else throw json
+let handler = async (m, { text, usedPrefix, command }) => {
+if (!text) throw `${lenguajeGB['smsAvisoMG']()}Scrivi un testo per parlare con me\n\nEsempio\n*${usedPrefix + command} Hey SuperFabriBot*\n\nScrivi qualcosa per parlare con me\n\nEsempio\n*${usedPrefix + command} Ciao SuperFabri*`
+let res = await fetch (`https://api.simsimi.net/v2/?text=${text}&lc=it`)    //(`https://simsimi.info/api/?text=${text}&lc=it`)    
+let json = await res.json()
+let tes = json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsimi').replace('sim simi', 'sim simi')
+//m.reply(`${tes}`) 
+conn.sendHydrated(m.chat, `${tes}`, `𝘼𝙄 | ${wm}`, null, null, null, null, null, [
+['Torna al menu ☘️', '/menu']
+], m)
 }
-handler.help = ['bot']
+handler.help = ['simsimi']
 handler.tags = ['fun']
-handler.command = ['bot', 'simi'] 
-handler.register = true
-
+handler.command = ['bot', 'simi', 'simsimi', 'alexa', 'bixby', 'cortana', 'siri', 'okgoogle']
 export default handler
+
+
+
