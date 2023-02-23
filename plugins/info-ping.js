@@ -17,8 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         }) * 1000
     }
     let muptime = clockString(_muptime)
-          m.reply(`${ssd}🚀 *AH MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)} _ms_`);
-          m.reply(`*⌛HEY FRA SONO ATTIVO DA..  \n\n${muptime}`)  });
+          m.reply(`${ssd}🚀 *AH MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)} _ms_`*⌛ HEY FRA SONO ATTIVO DA..\n\n${muptime}`)  });
 }
 handler.help = ['ping']
 handler.tags = ['main']
