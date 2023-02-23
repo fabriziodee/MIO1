@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['393518398856', 'NovaBot-MD', true],
+  ['393518398856', 'SUPERFABRI', true],
   ['393518398856'],
   ['393518398856'],
   ['393518398856'],
@@ -52,27 +52,27 @@ global.imagen1 = ['./media/menu1.jpg']
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = 'NovaBot-MD'
-global.author = 'NovaBot-MD'
+global.packname = 'SUPERFABRIBOT-MD'
+global.author = 'SUPERFABRIBOT-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.fgig = 'https://github.com/elrebelde21/NovaBot-MD'
+global.fgig = 'https://github.com/fabriziodee/Nova'
  
-global.yt = 'https://www.youtube.com/@TheLoliBot-MD'
+global.yt = ''
 
-global.fgpyp = 'tiktok.com/@thelolibot_md'
+global.fgpyp = 'https://www.tiktok.com/@3r1z10'
 
-global.faceb = 'https://facebook.com/groups/872989990425789/'
+global.faceb = ''
 
 global.vs = '1.5.0'
 
-global.lb = 'ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ'
+global.lb = 'SUPERFABRIBOT-MD'
 global.lolibot = lb
 
-global.dygp = 'https://chat.whatsapp.com/FfiQUYDDtaG9bwaI7UKMAR' //grupo del bot
+global.dygp = 'https://chat.whatsapp.com/BHZDSUDHuwWEed4Ut8aeUQ' //grupo del bot
 
-global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
+global.nna = 'https://chat.whatsapp.com/BHZDSUDHuwWEed4Ut8aeUQ' //UPDATE
 
 global.fglog = 'https://telegra.ph/file/1861aab98389b13db8588.png' 
 
@@ -81,8 +81,8 @@ global.maxwarn = '4' // máxima advertencias
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.wm = 'ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ'
-global.wait = '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*'
+global.wm = 'SUPERFABRIBOT-MD'
+global.wait = '*⌛ _Caricando..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
