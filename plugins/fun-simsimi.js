@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { text, usedPrefix, command }) => {
-if (!text) throw `${lenguajeGB['smsAvisoMG']()}Scrivi un testo per parlare con me\n\nEsempio\n*${usedPrefix + command} Hey SuperFabriBot*\n\nScrivi qualcosa per parlare con me\n\nEsempio\n*${usedPrefix + command} Ciao SuperFabri*`
+if (!text) throw `${lang['smsAvisoMG']()}Scrivi un testo per parlare con me\n\nEsempio\n*${usedPrefix + command} Hey SuperFabriBot*\n\nScrivi qualcosa per parlare con me\n\nEsempio\n*${usedPrefix + command} Ciao SuperFabri*`
 let res = await fetch (`https://api.simsimi.net/v2/?text=${text}&lc=it`)    //(`https://simsimi.info/api/?text=${text}&lc=it`)    
 let json = await res.json()
 let tes = json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsimi').replace('sim simi', 'sim simi')
