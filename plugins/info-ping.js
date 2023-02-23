@@ -9,10 +9,11 @@ let handler = async (m, { conn }) => {
           let child = stdout.toString("utf-8");
           let ssd = child.replace(/Memory:/, "Ram:");
           m.reply(`${ssd}🚀 *sono veloce?* : ${latensi.toFixed(4)} _ms_`);
+                  
          let _muptime
     if (process.send) {
       process.send('uptime')
-      _muptime = await new Promise(resolve => {
+      _muptime = new Promise(resolve => {
         process.once('message', resolve)
         setTimeout(resolve, 1000)
       }) * 1000
