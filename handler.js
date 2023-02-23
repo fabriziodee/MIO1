@@ -575,7 +575,7 @@ global.dfail = (type, m, conn) => {
         private: '🌑Questo comando puoi utilizzarlo in chat privata',
         admin: '🌑Questo comando è disponibile per soli admin',
         botAdmin: '💥🌑Devi dare admin al bot..',
-        unreg: '🔴🌑Hey non sei registrato 🌑🔴\nper utilizzare il bot devi registrarti:\n\n*/reg nombre.edad*',
+        unreg: '🔴🌑Hey non sei registrato 🌑🔴\nper utilizzare il bot devi registrarti:Chiedi al mio creatore (prefix)owner\n\n*',
         restrict: '🔐🌑 ahahah il comando è disattivato'
     }[type]
     if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', '.ok'] ], m)
