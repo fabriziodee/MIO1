@@ -41,7 +41,7 @@ rows: [
 ]}, ]
 let name = await conn.getName(m.sender)
 const listMessage = {
-text: `~ HOLA ${taguser}*`, footer: `
+text: `~ HEYY ${taguser}*`, footer: `
 ╭┄〔 ≪ •🌐• ≫ 〕┄⊱
 ┆📡 benvenuto nel menù lista
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
@@ -54,6 +54,9 @@ text: `~ HOLA ${taguser}*`, footer: `
 ┆□ ♨️ *ᴍᴏᴅᴏ:* ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 ┆💞 info sull utente 💞
+┆text: `~ HEYY ${taguser}*`, footer:
+┆🔸️ 📱ɴᴜᴍᴇʀᴏ: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+┆🔸 ️🔖 ɴᴏᴍʙʀᴇ: ${name} ${user.registered === true ? 'ͧͧͧͦꙶͣͤ✓' : ''}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 ┆□ 👑 premium: ${user.premiumTime > 0 ? '✅' : '❌'}
 ┆□ ❇️ registrazione: ${registered ? '✅': '❎'}
