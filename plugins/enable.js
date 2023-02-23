@@ -27,9 +27,9 @@ const sections = [
 ]
 
 const listMessage = {
-  text: '║ecco la lista da attivare e disattivare║',
+  text: '║LISTA ENABLE/DISABLE║',
   footer: fgig,
-  title: `╔══ೋೋ══╗\n║◤━━ ☆. ∆ .☆ ━━◥`,
+  title: `║◤━━ ☆. ∆ .☆ ━━◥`,
   buttonText: "SELEZIONA QUI",
   sections
 }
