@@ -10,8 +10,8 @@ let handler = async (m, { conn }) => {
           let ssd = child.replace(/Memory:/, "Ram:");
           m.reply(`${ssd}🚀 *AH MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)} _ms_`);
             });
-         let handler = async (m, { conn, args, usedPrefix, command }) => {
-	
+     
+let handler = async (m, { conn, args, usedPrefix, command }) => {
 	let _muptime
     if (process.send) {
       process.send('uptime')
@@ -23,6 +23,7 @@ let handler = async (m, { conn }) => {
     let muptime = clockString(_muptime)
    m.reply(`*⌛HEY FRA SONO ATTIVO DA..  \n\n${muptime}`) 
 }
+
 handler.help = ['ping']
 handler.tags = ['main']
 handler.command = ['ping', 'speed']
