@@ -1,21 +1,20 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { text, usedPrefix, command }) => {
-  
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+	
  let name = conn.getName(m.sender)
-  if (!text) throw `Scrivi un testo per parlare con me\n\nEsempio\n*${usedPrefix + command} Hey SuperFabriBot*\n\nScrivi qualcosa per parlare con me\n\nEsempio\n*${usedPrefix + command} Ciao SuperFabri*`
+  if (!text) throw `HEY 👋 *${name}* VUOI PARLARE UN PO? SCRIVIMI\n\nESEMPIO : *${usedPrefix + command}* HEY FABRI`
   m.react('🗣️') 
   await conn.sendPresenceUpdate('composing', m.chat)
-  //let res = await fetch(global.API('https://api.simsimi.net', '/v2/', { text: encodeURIComponent(m.text), lc: "es" }, ''))
-  let res = await fetch (`https://api.simsimi.net/v2/?text=${text}&lc=it`)    //(`https://simsimi.info/api/?text=${text}&lc=it`)    
+  //let res = await fetch(global.API('https://api.simsimi.net', '/v2/', { text: encodeURIComponent(m.text), lc: "ita" }, ''))
+  let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=ita`)
   let json = await res.json()
-  let (json.success) = m.reply(json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux'))
-  //m.reply(`${tes}`) 
-
-handler.help = ['simsimi']
+  if (json.success) m.reply(json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux'))
+  else throw json
+}
+handler.help = ['bot']
 handler.tags = ['fun']
-handler.command = ['bot', 'simi', 'simsimi', 'alexa', 'bixby', 'cortana', 'siri', 'okgoogle']
+handler.command = ['ai', 'simi'] 
+handler.register = true
+
 export default handler
-
-
-
