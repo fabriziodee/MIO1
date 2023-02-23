@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
- {await m.reply('⌛ _Cargando..._\n▰▰▰▱▱▱▱▱▱')}
+ {await m.reply('⌛ Mi sto spogliando per te..._\n▰▰▰▱▱▱▱▱▱')}
 let url = packgirl[Math.floor(Math.random() * packgirl.length)]
 conn.sendButton(m.chat, `_🥵 Pack 2 🥵_`, author, url, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], m)
 }
