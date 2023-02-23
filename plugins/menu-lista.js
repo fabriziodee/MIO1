@@ -25,45 +25,45 @@ let uptime = clockString(_uptime)
 
 const sections = [  
 {
-title: `ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ✨ sᴇʟᴇᴄᴄɪᴏɴᴇs ᴀǫᴜɪ`,
+title: `superfabriʙᴏᴛ-ᴍᴅ ✨ seleziona qui bro`,
 rows: [
-       {title: "ɪɴғᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴇʟ ᴄᴜᴀɴᴛᴏs ɢʀᴜᴘᴏs ᴇsᴛᴀ ᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grouplist`},
-        {title: "ᴄʀᴇᴀᴅᴏʀ", description: "ɴᴜᴍᴇʀᴏ ᴅᴇʟ ᴄʀᴇᴀᴅᴏʀ", rowId: `${usedPrefix}owner`},
-        {title: "ᴍᴇɴᴜᴄᴏᴍᴘʟᴇᴛᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴛᴏᴅᴀ ʟᴀs ғᴜɴᴄɪᴏɴᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}menucompleto`},
-      {title: "ᴇsᴛᴀᴅᴏ", description: "ᴘᴀʀᴀ sᴀʙᴇʀ sɪ ᴇʟ ʙᴏᴛ ᴇsᴛᴀ ᴀᴄᴛɪᴠᴏ", rowId: `${usedPrefix}estado`},
-      {title: "ɢʀᴜᴘᴏs", description: "ǫᴜᴇ ᴍᴜᴇsᴛʀᴀ ʟᴏs ɢʀᴜᴘᴏs ᴏғɪᴄɪᴀʟᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grupos`},
-      {title: "ᴘɪɴɢ", description: "ᴍᴜᴇsᴛᴀ ʟᴀs ᴠᴇʟᴏᴄɪᴅᴀᴅ ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}ping`},
-      {title: "ᴇɴᴀʙʟᴇ", description: "ᴘᴀʀᴀ ᴀᴄᴛɪᴠᴀ ᴏ ᴅᴇsᴀᴄᴛɪᴠᴀʀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴᴇs", rowId: `${usedPrefix}enable`},
-      {title: "ʜɪᴅᴇᴛᴀɢ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴄᴏɴ ᴜɴ ᴛᴇxᴛᴏ", rowId: `${usedPrefix}hidetag`},
-      {title: "ᴛᴀɢᴀʟʟ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴇɴ ᴜɴᴀ ʟɪsᴛᴀ", rowId: `${usedPrefix}tagall`},
-      {title: "ᴅᴇʟ", description: "ᴘᴀʀᴀ ᴇʟɪᴍɪɴᴀʀ ᴜɴ ᴍᴇɴsᴀᴊᴇ", rowId: `${usedPrefix}del`},
-              {title: "ᴡᴏʀᴋ", description: "ᴛʀᴀʙᴀᴊᴀ ʏ ɢᴀɴᴀs ᴇxᴘᴇʀɪᴇɴᴄɪᴀ xᴘ", rowId: `${usedPrefix}work`},
+       {title: "ɪɴғᴏ", description: "mostra i gruppi ufficiali del bot", rowId: `${usedPrefix}grouplist`},
+        {title: "creatore", description: "numero del creatore", rowId: `${usedPrefix}owner`},
+        {title: "ᴍᴇɴᴜᴄᴏᴍᴘʟᴇᴛᴏ", description: "per vedere tutti le funzioni del bot", rowId: `${usedPrefix}menucompleto`},
+      {title: "stato", description: "per controllare da quanto è attivo il bot", rowId: `${usedPrefix}estado`},
+      {title: "gruppi", description: "mostra i gruppi del bot", rowId: `${usedPrefix}grupos`},
+      {title: "ᴘɪɴɢ", description: "mostra la super velocità del bot", rowId: `${usedPrefix}ping`},
+      {title: "ᴇɴᴀʙʟᴇ", description: "per attivare le funzioni creatore del bot", rowId: `${usedPrefix}enable`},
+      {title: "ʜɪᴅᴇᴛᴀɢ", description: "per menzionare tutti con un testo predefinito", rowId: `${usedPrefix}hidetag`},
+      {title: "ᴛᴀɢᴀʟʟ", description: "per menzionare tutti in una lista", rowId: `${usedPrefix}tagall`},
+      {title: "ᴅᴇʟ", description: "elimina l ultimo messaggio inviato", rowId: `${usedPrefix}del`},
+              {title: "ᴡᴏʀᴋ", description: "lavora per generare esperienza, non ti servirà a nulla", rowId: `${usedPrefix}work`},
 ]}, ]
 let name = await conn.getName(m.sender)
 const listMessage = {
 text: `~ HOLA ${taguser}*`, footer: `
 ╭┄〔 ≪ •🌐• ≫ 〕┄⊱
-┆📡 ʙɪᴇɴᴠᴇɴɪᴅᴏ ᴀʟ ᴍᴇɴᴜ ʟɪsᴛᴀ
+┆📡 benvenuto nel menù lista
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
 ┆🎁 ɪɴғᴏ  ᴅᴇʟ ʙᴏᴛ 🎁
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-┆□ ⏱️ *ʜᴏʀᴀ:* ${time}    
-┆□ ⏰ *ᴀᴄᴛɪᴠɪᴅᴀᴅ:* ${uptime}
-┆□ 𓃠 *ᴠᴇʀsɪᴏɴ ᴅᴇʟ ʙᴏᴛ:* ${vs}
-┆□ 👥 *ᴜsᴜᴀʀɪᴏ(s):* ${Object.keys(global.db.data.users).length} 
+┆□ ⏱️ *ora:* ${time}    
+┆□ ⏰ *attivato da:* ${uptime}
+┆□ 𓃠 *versione del bot:* ${vs}
+┆□ 👥 *utente(i):* ${Object.keys(global.db.data.users).length} 
 ┆□ ♨️ *ᴍᴏᴅᴏ:* ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-┆💞 ɪɴғᴏ ᴅᴇʟ ᴜsᴜᴀʀɪᴏ 💞
+┆💞 info sull utente 💞
 ┆◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-┆□ 👑 ᴘʀᴇᴍɪᴜᴍ: ${user.premiumTime > 0 ? '✅' : '❌'}
-┆□ ❇️ ʀᴇɢɪsᴛʀᴀᴅᴏ: ${registered ? '✅': '❎'}
-┆□ 🎖️ ɴɪᴠᴇʟ: ${level}
-┆□ 💎 ᴅɪᴀᴍᴀɴᴛᴇs: ${diamond}
-┆□ 🧰 ᴇxᴘᴇʀɪᴇɴᴄɪᴀ: ${exp}
+┆□ 👑 premium: ${user.premiumTime > 0 ? '✅' : '❌'}
+┆□ ❇️ registrazione: ${registered ? '✅': '❎'}
+┆□ 🎖️ livello: ${level}
+┆□ 💎 diamanti: ${diamond}
+┆□ 🧰 esperienza: ${exp}
 └────ׂ─ׂ─ׂ─ׂ─────
 *ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
-buttonText: "🅗🅐🅖🅐 🅒🅛🅘🅒🅚 🅐🅠🅤🅘", 
+buttonText: "APRI IL MENU", 
 sections }
 
 conn.sendMessage(m.chat, listMessage)
