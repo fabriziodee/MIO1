@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
           let child = stdout.toString("utf-8");
           let ssd = child.replace(/Memory:/, "Ram:");
     }
-    let muptime = clockString = ssd = speed(_muptime)
+    let muptime = clockString (_muptime)
    m.reply(`*⌛Hey fra sono attivo da*' \n\n${muptime}`)(m.reply(`${ssd}🚀 *Velocità* : ${'latensi.toFixed(4)} _ms_`);
 }
 handler.help = ['runtime']
