@@ -7,10 +7,16 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       _muptime = await new Promise(resolve => {
         process.once('message', resolve)
         setTimeout(resolve, 1000)
-      }) * 1000
+      }) * 1000 
+	    let handler = async (m, { conn }) => {
+         let timestamp = speed();
+         let latensi = speed() - timestamp;
+         exec(`neofetch --stdout`, (error, stdout, stderr) => {
+          let child = stdout.toString("utf-8");
+          let ssd = child.replace(/Memory:/, "Ram:");
     }
-    let muptime = clockString(_muptime)
-   m.reply(`*⌛HEY FRA SONO ATTIVO DA..  \n\n${muptime}`) 
+    let muptime = clockString = ssd = speed(_muptime)
+   m.reply(`*⌛Hey fra sono attivo da*' \n\n${muptime}`)(m.reply(`${ssd}🚀 *Velocità* : ${'latensi.toFixed(4)} _ms_`);
 }
 handler.help = ['runtime']
 handler.tags = ['main']
@@ -24,19 +30,6 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [d, ' dias ', h, ' hs ', m, ' min ', s, ' seg '].map(v => v.toString().padStart(2, 0)).join('')
-}
-
-import speed from 'performance-now'
-import { spawn, exec, execSync } from 'child_process'
-
-let handler = async (m, { conn }) => {
-         let timestamp = speed();
-         let latensi = speed() - timestamp;
-         exec(`neofetch --stdout`, (error, stdout, stderr) => {
-          let child = stdout.toString("utf-8");
-          let ssd = child.replace(/Memory:/, "Ram:");
-          m.reply(`${ssd}🚀 *Velocidad* : ${latensi.toFixed(4)} _ms_`);
-            });
 }
 
 export default handler
