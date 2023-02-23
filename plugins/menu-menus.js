@@ -5,51 +5,45 @@ import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
   'main': 'INFOBOT',
-  'game': 'JUEGOS',
-  'econ': 'NIVEL & ECONOMIA',
+  'game': 'GIOCHI',
+  'econ': 'LIVELLI ED ECONOMIA',
   'rg': 'REGISTRO',
   'sticker': 'STICKER',
-  'img': 'IMAGEN',
-  'maker': 'LOGOS',
+  'img': 'IMMAGINI',
+  'maker': 'LOGHI',
   'prem': 'PREMIUM',
-  'group': 'GRUPO',
-  'nable': 'OPCIONES PARA ACTIVA Y DESACTIVA', 
-  'downloader': 'DESCARGAS',
-  'tools': 'HERRAMIENTA',
-  'fun': 'FUN',
+  'group': 'GRUPPO',
+  'nable': 'OPZIONI PER ATTIVARE E DISATTIVARE', 
+  'downloader': 'DOWNLOAD',
+  'tools': 'ATTREZZI',
+  'fun': 'DIVERTIMENTO',
   'cmd': 'DATABASE',
   'nsfw': 'COMANDO +18', 
   'ansfw': 'NSFW ANIME',
   'owner': 'ᴘʀᴏᴘɪᴇᴛᴀʀɪᴏ/ᴏᴡɴᴇʀ', 
 }
 const defaultMenu = {
-  before: `╔═════ೋೋ═════╗
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+  before: `╔════ೋೋ════╗
+║◤━━☆. ∆ .☆ ━━◥
 ║✾ Hola 👋🏻 *%name*
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-║✾ ғᴇᴄʜᴀ: %week , %date
-║✾ ʜᴏʀᴀ: %time
-║✾ ᴜsᴜᴀʀɪᴏ : %totalreg
-║✾ ᴀᴄᴛɪᴠɪᴅᴀᴅ : %muptime
-║
-║✾ ʟɪᴍɪᴛᴇ : %diamond
-║✾ ɴɪᴠᴇʟ : *%level* 
-║✾ ʀᴀɴɢᴏ : *%role*
-║✾ ᴇxᴘ : %totalexp XP 
-║ 
+║◤━━☆. ∆ .☆ ━━◥
+║✾ giorno: %week , %date
+║✾ ora: %time
+║✾ utente : %totalreg
+║✾ attività : %muptime
 ║✾ ʀᴇɢɪsᴛʀᴀᴅᴏ : %rtotalreg de %totalreg
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 
-╔═════「 ɪɴғᴏʀᴍᴀᴄɪᴏɴ 」═════╗
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-║ ᴇʟ ʙᴏᴛ ᴇs ɴᴜᴇᴠᴏ ᴛᴏᴅᴀᴠɪᴀ ᴇsᴛᴀ ᴅᴇsᴀʀʀᴏʟʟᴀᴅᴏ,
-║ sɪ ᴘʀᴇsᴇɴᴛᴀ ᴀʟɢᴜɴ ᴘʀᴏʙʟᴇᴍᴀ,
-║ ᴄᴏᴍᴜɴɪᴄᴀʀsᴇ ᴄᴏɴ ᴍɪ ᴄʀᴇᴀᴅᴏʀ
-║ ᴇsᴄʀɪʙɪʀ !creador
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-║ʙᴏᴛ sɪᴍᴘʟᴇ ᴄᴏɴ ᴘᴏᴄᴏs ᴄᴏᴍᴀɴᴅᴏs
-║◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+╔═══「 informazioni 」═══╗
+║║◤━━☆. ∆ .☆ ━━◥
+║ Il bot è in fase di programmazione,
+║ tuttavia, se si presentasse qualsiasi problema,
+║ comunicalo al mio creatore
+║ scrivi il comando !creador
+║║◤━━☆. ∆ .☆ ━━◥
+║superfabribot semplice ed intuitivo
+║║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 `.trimStart(),
   header: '╔═════ %category ═════╗ ',
@@ -162,7 +156,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⏍ Info', `${_p}botinfo`],
       ['⌬ Grupos', `${_p}gpdylux`]
     ], m)*/  
-    conn.sendButton(m.chat, text.trim(), '*ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ*', pp, [
+    conn.sendButton(m.chat, text.trim(), '*SUPERFABRIBOT*', pp, [
       ['Info', `${_p}botinfo`],
       ['Grupos', `${_p}grupos`]
     ],m, rpl)
