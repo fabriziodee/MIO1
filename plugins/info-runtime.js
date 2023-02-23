@@ -7,8 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       _muptime = await new Promise(resolve => {
         process.once('message', resolve)
         setTimeout(resolve, 1000)
-      }) * 1000 
-	    let handler = async (m, { conn }) => {
+      ) * 1000 
          let timestamp = speed();
          let latensi = speed() - timestamp;
          exec(`neofetch --stdout`, (error, stdout, stderr) => {
