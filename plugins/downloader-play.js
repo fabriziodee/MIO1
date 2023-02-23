@@ -2,17 +2,17 @@
 import yts from 'yt-search'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 	
-	if (!text) throw `Que esta buscado? ingrese el nombre del tema\n\nEjemplo *${usedPrefix + command}* ozuna`
+	if (!text) throw `Cosa sta cercando? inserisci il nome del tema\n\nEsempio *${usedPrefix + command}* ozuna`
 	let vid = (await yts(text)).all[0]
-	if (!vid) throw `tema no encontrado/ o el serve esta caido intente de nuevo`
+	if (!vid) throw `tema non trovato / o il server non funziona riprovare`
 	let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
 	m.react('🎧')
 	let play = `╭───≪~*╌◌ᰱ•••⃙❨͟͞P̸͟͞L̸͟A̸͟͞Y̸͟͞❩⃘•••ᰱ◌╌*~*
-│║📌 *Título* : ${title}
-│║📆 *Publicado:* ${ago}
-│║⌚ *Duración:* ${timestamp}
-│║👀 *Vistas:* ${views}
+│║📌 *Títolo* : ${title}
+│║📆 *Pubblicato il:* ${ago}
+│║⌚ *Durata* ${timestamp}
+│║👀 *Visual:* ${views}
 │║
 │║        *████████████┃%100*
 ╰─•┈┈┈•••✦𝒟ℳ✦•••┈┈┈•─╯⟤`
