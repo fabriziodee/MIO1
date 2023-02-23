@@ -25,3 +25,18 @@ function clockString(ms) {
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [d, ' dias ', h, ' hs ', m, ' min ', s, ' seg '].map(v => v.toString().padStart(2, 0)).join('')
 }
+
+import speed from 'performance-now'
+import { spawn, exec, execSync } from 'child_process'
+
+let handler = async (m, { conn }) => {
+         let timestamp = speed();
+         let latensi = speed() - timestamp;
+         exec(`neofetch --stdout`, (error, stdout, stderr) => {
+          let child = stdout.toString("utf-8");
+          let ssd = child.replace(/Memory:/, "Ram:");
+          m.reply(`${ssd}🚀 *Velocidad* : ${latensi.toFixed(4)} _ms_`);
+            });
+}
+
+export default handler
