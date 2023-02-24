@@ -41,13 +41,12 @@ rows: [
 ]}, ]
 let name = await conn.getName(m.sender)
 const listMessage = {
-text: `*~ HEYY*${taguser}`, footer: `
+text: `*~ HEYY*${user}`, footer: `
 ╭┄〔 ≪ •🌐• ≫ 〕┄⊱
-┆benvenuto nel menù lista
 ┆*ora:* ${time}    
 ┆*attivato da:* ${uptime}
 ┆*versione del bot:* ${vs}
-┆◤━━☆. ∆ .☆ ━━◥
+┆ 〔 ≪ •🌐• ≫ 〕┄⊱
 *superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
 buttonText: "APRI IL MENU", 
