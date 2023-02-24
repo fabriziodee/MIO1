@@ -27,29 +27,25 @@ const defaultMenu = {
 
 ║ᙏσσɳCɬσᥙԃട
 ║✾ Hola 👋🏻 *%name*                       
-║◤━━☆. ∆ .☆ ━━◥
 ║✾ giorno: %week , %date
 ║✾ ora: %time
 ║✾ utente : %totalreg
 ║✾ attività : %muptime
-║✾ ʀᴇɢɪsᴛʀᴀᴅᴏ : %rtotalreg de %totalreg
-║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 
-╔═「 informazioni 」═╗
-║║◤━━☆. ∆ .☆ ━━◥
-║ Il bot è in fase di programmazione,
-║ tuttavia, se si presentasse qualsiasi problema,
+ ═「 informazioni 」═
+║ Il bot è in fase di 
+║ programmazione,
+║ tuttavia, se si presentasse
+║ qualsiasi problema,
 ║ comunicalo al mio creatore
 ║ scrivi il comando !creador
-║║◤━━☆. ∆ .☆ ━━◥
 ║superfabribot semplice ed intuitivo
-║║◤━━☆. ∆ .☆ ━━◥
 ╚════ ≪ •❈• ≫ ════╝
 `.trimStart(),
-  header: '╔═%category═╗ ',
+  header: '╔═══%category═══╗ ',
   body: '║ %cmd %isdiamond %isPremium',
-  footer: '╚═≪ •❈• ≫═╝\n',
+  footer: '╚═══≪ •❈• ≫═══╝\n',
   after: `
 `,
 }
@@ -171,7 +167,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 }
 handler.help = ['help']
 handler.tags = ['main']
-handler.command = ['menucompleto', 'help', 'fullmenu'] 
+handler.command = ['menucompleto', 'enu', 'fullmenu'] 
 handler.register = false
 
 handler.exp = 3
