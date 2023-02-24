@@ -158,8 +158,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⌬ Grupos', `${_p}gpdylux`]
     ], m)*/  
     conn.sendButton(m.chat, text.trim(), '*SUPERFABRIBOT*', pp, [
-      ['Info', `${_p}botinfo`],
-      ['Grupos', `${_p}grupos`]
+      ['Ping', `${_p}ping`],
+      ['Gruppi', `${_p}grupos`]
     ],m, rpl)
   
     m.react('🙌') 
