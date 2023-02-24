@@ -47,7 +47,6 @@ text: `*~ HEYY*${taguser}`, footer: `
 ┆*ora:* ${time}    
 ┆*attivato da:* ${uptime}
 ┆*versione del bot:* ${vs}
-┆*Ping:* ${speed}
 ┆◤━━☆. ∆ .☆ ━━◥
 *superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
