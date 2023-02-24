@@ -9,7 +9,12 @@ await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 }
 
     if (!text) return conn.reply(m.chat, '*_Inserisci il testo da inviare come spam!_*', m)
-
+    let users = participants.map(u => conn.decodeJid(u.id))
+    let quoted = m.quoted ? m.quoted : m
+    let mime = (quoted.msg || quoted).mimetype || ''
+    let isMedia = /image|video|sticker|audio/.test(mime)
+    let more = String.fromCharCode(8206)
+    let masss = more.repeat(850)
     let pesan = `${text}`
     await m.reply('*_START SPAM!_*\n\n*_Nota: il Bot invierà il messaggio 30 volte_*')
 
