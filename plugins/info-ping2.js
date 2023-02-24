@@ -1,4 +1,5 @@
-import Connection from '../lib/connection.js'
+import speed from 'performance-now'
+import { spawn, exec, execSync } from 'child_process'
 import { cpus as _cpus, totalmem, freemem } from 'os'
 import os from 'os'
 import { performance } from 'perf_hooks'
