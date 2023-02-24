@@ -1,48 +1,166 @@
-import speed from 'performance-now'
-import { spawn, exec, execSync } from 'child_process'
-import { cpus as _cpus, totalmem, freemem } from 'os'
-import os from 'os'
-import { performance } from 'perf_hooks'
-import { sizeFormatter } from 'human-readable'
-
+/*Apasi kontol cuma nyuri fitur doang*/
+let { totalmem, freemem } = require('os')
+let os = require("os");
+let util = require("util");
+let osu = require("node-os-utils");
+let { performance } = require("perf_hooks");
+let { sizeFormatter } = require("human-readable");
 let format = sizeFormatter({
-	std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
-	decimalPlaces: 2,
-	keepTrailingZeroes: false,
-	render: (literal, symbol) => `${literal} ${symbol}B`,
+  std: "JEDEC", // 'SI' (default) | 'IEC' | 'JEDEC'
+  decimalPlaces: 2,
+  keepTrailingZeroes: false,
+  render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-
-let handler = async (m, { conn }) => {
-	let groups
-	try { groups = Object.values(await conn.groupFetchAllParticipating()) }
-	catch { return }
-	let chats = Object.entries(Connection.store.chats).filter(([id, data]) => id && data.isChats)
-	let groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
-	let used = process.memoryUsage()
-	let cpu = _cpus().map(cpu => {
-		cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
-		return cpu
-	})
-	cpu = cpu[0] ? cpu[0] : ''
-	let old = performance.now()
-	let neww = performance.now()
-	let speed = neww - old
-	let txt = `Kecepatan Respon ${speed.toFixed(4)} detik\n\n`
-	txt += `Runtime :\n*${runtime(process.uptime())}*\n`
-	txt += `OS Uptime :\n*${runtime(os.uptime())}*\n\n`
-	txt += `💬 Status :\n- *${groupsIn.length < groups.length ? groups.length : groupsIn.length}* Group Chats\n`
-	txt += `- *${groups.length}* Groups Joined\n`
-	txt += `- *${groupsIn.length < groups.length ? 0 : groupsIn.length - groups.length}* Groups Left\n`
-	txt += `- *${chats.length - groupsIn.length}* Personal Chats\n`
-	txt += `- *${chats.length - ( groupsIn.length < groups.length ? 0 : groupsIn.length - groups.length )}* Total Chats\n\n`
-	txt += `💻 *Server Info*\n${cpu ? `_${cpu.model.trim()} (${cpu.speed} MHZ)_\n` : ''}\n`
-	txt += `RAM: ${format(totalmem() - freemem())} / ${format(totalmem())}`
-	await m.reply(txt)
+var handler = async (m, { conn }) => {
+  const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
+  const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) //groups.filter(v => !v.read_only)
+  const used = process.memoryUsage()
+  const cpus = os.cpus().map(cpu => {
+    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
+    return cpu
+  })
+  const cpu = cpus.reduce(
+    (last, cpu, _, { length }) => {
+      last.total += cpu.total;
+      last.speed += cpu.speed / length;
+      last.times.user += cpu.times.user;
+      last.times.nice += cpu.times.nice;
+      last.times.sys += cpu.times.sys;
+      last.times.idle += cpu.times.idle;
+      last.times.irq += cpu.times.irq;
+      return last;
+    },
+    {
+      speed: 0,
+      total: 0,
+      times: {
+        user: 0,
+        nice: 0,
+        sys: 0,
+        idle: 0,
+        irq: 0,
+      },
+    }
+  );
+  let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+await m.reply('_Testing speed..._')
+   let muptime = clockString(_muptime)
+  let old = performance.now();
+  let neww = performance.now();
+  let speed = neww - old;
+  let cpux = osu.cpu
+        let cpuCore = cpux.count()
+        let drive = osu.drive
+        let mem = osu.mem
+        let netstat = osu.netstat
+        let HostN = osu.os.hostname()
+        let OS = osu.os.platform()
+        let ipx = osu.os.ip()
+        let cpuModel = cpux.model()
+  let cek = await(await fetch("https://api.myip.com")).json().catch(_ => 'error')
+        
+        let ip = (cek == 'error' ? 'ɴᴏᴛ ᴅᴇᴛᴇᴄᴛ' : cek.ip)
+        let cr = (cek == 'error' ? 'ɴᴏᴛ ᴅᴇᴛᴇᴄᴛ' : cek.country)
+        let cc = (cek == 'error' ? 'ɴᴏᴛ ᴅᴇᴛᴇᴄᴛ' : cek.cc)
+        
+        let d = new Date(new Date + 3600000)
+        let locale = 'id'
+    let weeks = d.toLocaleDateString(locale, { weekday: 'long' })
+    let dates = d.toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    })
+        let times = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+  m.reply(`*ᴘ ɪ ɴ ɢ*
+${Math.round(neww - old)} ms
+${speed} ms
+*ʀ ᴜ ɴ ᴛ ɪ ᴍ ᴇ* 
+${muptime}
+*ᴄ ʜ ᴀ ᴛ s*
+• *${groupsIn.length}* Group Chats
+• *${groupsIn.length}* Groups Joined
+• *${groupsIn.length - groupsIn.length}* Groups Left
+• *${chats.length - groupsIn.length}* Personal Chats
+• *${chats.length}* Total Chats
+*s ᴇ ʀ ᴠ ᴇ ʀ*
+*🛑 ʀᴀᴍ:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*🔵 ғʀᴇᴇRAM:* ${format(freemem())}
+*🔭 ᴘʟᴀᴛғᴏʀᴍ:* ${os.platform()}
+*🧿 sᴇʀᴠᴇʀ:* ${os.hostname()}
+*💻 ᴏs:* ${OS}
+*📍 ɪᴘ:* ${ip}
+*🌎 ᴄᴏᴜɴᴛʀʏ:* ${cr}
+*💬 ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ:* ${cc}
+*📡 ᴄᴘᴜ ᴍᴏᴅᴇʟ:* ${cpuModel}
+*🔮 ᴄᴘᴜ ᴄᴏʀᴇ:* ${cpuCore} Core
+*⏰ ᴛɪᴍᴇ sᴇʀᴠᴇʀ:* ${times}
+_NodeJS Memory Usage_
+${
+  "```" +
+  Object.keys(used)
+    .map(
+      (key, _, arr) =>
+        `${key.padEnd(Math.max(...arr.map((v) => v.length)), " ")}: ${format(
+          used[key]
+        )}`
+    )
+    .join("\n") +
+  "```"
 }
+${
+  cpus[0]
+    ? `_Total CPU Usage_
+${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times)
+        .map(
+          (type) =>
+            `- *${(type + "*").padEnd(6)}: ${(
+              (100 * cpu.times[type]) /
+              cpu.total
+            ).toFixed(2)}%`
+        )
+        .join("\n")}
+_CPU Core(s) Usage (${cpus.length} Core CPU)_
+${cpus
+  .map(
+    (cpu, i) =>
+      `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(
+        cpu.times
+      )
+        .map(
+          (type) =>
+            `- *${(type + "*").padEnd(6)}: ${(
+              (100 * cpu.times[type]) /
+              cpu.total
+            ).toFixed(2)}%`
+        )
+        .join("\n")}`
+  )
+  .join("\n\n")}`
+    : ""
+}
+`.trim())
+}
+handler.help = ['ping', 'speed'];
+handler.tags = ['info'];
+handler.command = /^(ping2|speed2|pong|ingfo)$/i
+module.exports = handler;
 
-handler.help = ['ping2']
-handler.tags = ['main']
-handler.command = ['ping2', 'speed2', 'p2']
-handler.register = true
-
-export default handler
+function clockString(ms) {
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [d, 'D ', h, 'H ', m, 'M ', s, 'S '].map(v => v.toString().padStart(2, 0)).join('')
+}
