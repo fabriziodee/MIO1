@@ -34,7 +34,7 @@ let handler = async (m, { conn, args }) => {
     
 handler.help = ['scan'].map(v => v + ' [nomor]')
 handler.tags = ['tools']
-handler.command = /^scan$/i
+handler.command = ['scan']
 
 module.exports = handler
 
