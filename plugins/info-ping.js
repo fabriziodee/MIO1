@@ -12,9 +12,9 @@ let handler = async (m, { conn }) => {
           let ssd = child.replace(/Memory:/, "Ram:")
           m.reply(`
           *───「 RUNTIME BOT 」───*
-          Runtime : ${tio} 
+          Runtime : ${tio},
           Waktu : ${time}
-          ${ssd}🚀 *MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)}*_ms_*`);
+          🚀 *MA FABRI HA LA FIBRA* : ${latensi.toFixed(4)}*_ms_*`);
           );
          }
 handler.help = ['ping']
