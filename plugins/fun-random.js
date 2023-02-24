@@ -12,7 +12,7 @@ let em = ['😀','😂','🍑','😍','🤤','🥵','😐','🙂','😎','👻',
     
 }
 
-handler.command = handler.help = ['zchi']
+handler.command = handler.help = ['chi']
 handler.tags = ['fun']
 
 handler.group = true
