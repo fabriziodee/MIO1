@@ -54,6 +54,8 @@ title: null,
 buttonText: "APRI IL MENU", 
 sections }
 
+let pp = './src/fg_logo.jpg'
+
 conn.sendMessage(m.chat, listMessage)
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
