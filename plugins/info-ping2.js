@@ -40,8 +40,9 @@ let handler = async (m, { conn }) => {
 	await m.reply(txt)
 }
 
-handler.menugroup = ['ping']
-handler.tagsgroup = ['group']
-handler.command = /^(pong|tes|test)$/i
+handler.help = ['ping2']
+handler.tags = ['main']
+handler.command = ['ping2', 'speed2', 'p2']
+handler.register = true
 
 export default handler
