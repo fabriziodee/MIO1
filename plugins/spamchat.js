@@ -1,3 +1,4 @@
+
 let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, '*_Inserisci il testo da inviare come spam!_*', m)
@@ -39,16 +40,16 @@ let handler = async(m, { conn, text }) => {
 handler.help = ['spamchat'].map(v => v + ' <teks>')
 handler.tags = ['General']
 handler.command = ['spam']
-handler.owner = false
+handler.owner = true
 handler.mods = false
 handler.premium = false
-handler.group = false
+handler.group = true
 handler.private = false
-handler.register = false
+handler.register = true
 handler.limit = false
 
-handler.admin = false
-handler.botAdmin = false
+handler.admin = true
+handler.botAdmin = true
 
 handler.fail = null
 handler.exp = 100
