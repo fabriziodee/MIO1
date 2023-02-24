@@ -43,4 +43,4 @@ await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
    
 }}
 export default handler
-handler.command = /^(antivoip)$/i
+handler.command = ['antivoip']
