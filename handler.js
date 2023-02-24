@@ -155,7 +155,7 @@ export async function handler(chatUpdate) {
                 if (!('status' in settings)) settings.status = 0
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: false,
+                autoread: true,
                 restrict: false, 
                 status: 0
             }
@@ -490,7 +490,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                         
-this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'ʙɪᴇɴᴠᴇɴɪᴅᴏ 👋' : ' ᴀᴅɪᴏs 🚮'), (action == 'add' ? '.ok' : '.llorar')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
+this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'HEY 👋' : ' ADDIO 🚮'), (action == 'add' ? '.ok' : '.llorar')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
                 
  //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
                    }
@@ -578,7 +578,7 @@ global.dfail = (type, m, conn) => {
         unreg: '🔴🌑Hey non sei registrato 🌑🔴\nper utilizzare il bot devi registrarti:Chiedi al mio creatore (prefix)owner\n\n*',
         restrict: '🔐🌑 ahahah il comando è disattivato'
     }[type]
-    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', '.ok'] ], m)
+    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['Ci ho provato', '.Ci ho provato'] ], m)
 }
 
 let file = global.__filename(import.meta.url, true)
