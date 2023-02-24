@@ -22,7 +22,7 @@ conn.reply(m.chat, personalidad, m, { mentions: conn.parseMention(personalidad) 
 }
 handler.help = ['personalidad *<nombre>*']
 handler.tags = ['fun']
-handler.command = ['Gender']
+handler.command = /^gender/i
 
 export default handler 
 
