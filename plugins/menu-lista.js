@@ -8,7 +8,7 @@ let time = d.toLocaleTimeString(locale, {
       second: 'numeric'
     }) 
 
-let pp = '.media/menu2.jpg'
+let pp = './src/fg_logo.jpg'
 let user = global.db.data.users[m.sender]
 let { money, joincount } = global.db.data.users[m.sender]
 let { exp, diamond, registered, self, level, role } = global.db.data.users[m.sender]
@@ -41,20 +41,18 @@ rows: [
 ]}, ]
 let name = await conn.getName(m.sender)
 const listMessage = {
-text: `~ HEYY ${taguser}*`, footer: `
+text: `*~ HEYY*${taguser}`, footer: `
 ╭┄〔 ≪ •🌐• ≫ 〕┄⊱
-┆📡 benvenuto nel menù lista
-┆◤━━☆. ∆ .☆ ━━◥
-┆□ ⏱️ *ora:* ${time}    
-┆□ ⏰ *attivato da:* ${uptime}
-┆□ 𓃠 *versione del bot:* ${vs}
+┆benvenuto nel menù lista
+┆*ora:* ${time}    
+┆*attivato da:* ${uptime}
+┆*versione del bot:* ${vs}
+┆*Ping:* ${speed}
 ┆◤━━☆. ∆ .☆ ━━◥
 *superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
 title: null,
 buttonText: "APRI IL MENU", 
 sections }
-
-let pp = './src/fg_logo.jpg'
 
 conn.sendMessage(m.chat, listMessage)
 }
