@@ -1,4 +1,4 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => {
+let handler = async (m, { conn }) => {
 let info = `
 *╭┅〘🛑 SEGUI LE REGOLE 🛑〙*
 *▌║✙*❌PROIBITO CHIAMARE IL BOT O CREATORE📲
