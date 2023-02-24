@@ -71,6 +71,8 @@ conn.sendFile(m.chat, vn, 'infobot.mp3', null, m, true, { type: 'audioMessage', 
 handler.help = ['ping']
 handler.tags = ['main']
 handler.command = ['ping', 'speed', 'p']
+handler.register = true
+
 export default handler
 
 function clockString(ms) {
