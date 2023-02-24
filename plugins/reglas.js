@@ -9,6 +9,6 @@ let info = `
 
 handler.help = ['reglas']
 handler.tags = ['info']
-handler.command = /^(reglas|regole)$/i
+handler.command = ['reglas', 'regole']
 
 module.exports = handler
