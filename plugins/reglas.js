@@ -7,8 +7,6 @@ let info = `
 *╰═┅ৡৢ͜͡✦╡SUPERFABRIBOT╞┅ৡৢ͜͡✦═╯*
 `.trim() 
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 SUPERFABRIBOT🔥*', 'status@broadcast')
-}
 handler.help = ['reglas']
 handler.tags = ['info']
 handler.command = /^(reglas|regole)$/i
