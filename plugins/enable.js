@@ -207,13 +207,13 @@ const listMessage = {
   }
   
   conn.sendButton(m.chat, `┏•━•━━•━ ◎ ━••━•━•━•┓
-┣ 𝙾𝙿𝙲𝙸𝙾𝙽𝙴𝚂
+┣ 🔸Opzioni
 ┣─━──━─❖─━──━─ ◎
 ┣ 🔸𝚃𝚒𝚙𝚘: ${type} 
 ┣─━──━─❖─━──━─ ◎
-┣ 🔸Stato: ${isEnable ? 'Activo ✅' : 'Desactivado ❌️'}
+┣ 🔸Stato: ${isEnable ? 'Attivato ✅' : 'Disattivato ❌️'}
 ┣─━──━─❖─━──━─ ◎
-┣ 🔸Dove: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
+┣ 🔸Dove: ${isAll ? 'Questo bot' : isUser ? '' : 'Questa chat'}
 ┗•━•━•━━ ◎ ━•━••━•━•┛`,lb, null, [[`${isEnable ? '❌️ Disattivare' : '✅ Attivare'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['🔰Menu', `${usedPrefix}help`]],m)
 
 /*m.reply(`
