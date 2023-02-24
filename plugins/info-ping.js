@@ -68,8 +68,8 @@ conn.sendButton(m.chat, info, `┌───⊷ ${lb}
 //conn.reply(m.chat, info, m)
 conn.sendFile(m.chat, vn, 'infobot.mp3', null, m, true, { type: 'audioMessage', ptt: true, sendEphemeral: true })
 }
-handler.help = ['infobot']
-handler.tags = ['info', 'tools']
+handler.help = ['ping']
+handler.tags = ['main']
 handler.command = ['ping', 'speed', 'p']
 export default handler
 
