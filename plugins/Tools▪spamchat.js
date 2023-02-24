@@ -44,5 +44,6 @@ handler.command = /^(spamchat)$/i
 handler.fail = null
 handler.exp = 100
 handler.limit = true
+handler.rowner = true
 
 export default handler
