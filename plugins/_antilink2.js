@@ -22,6 +22,8 @@ handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
   }
   return true
 }
-handler.command = ['antilink2']
-module.exports = handler
 
+handler.command = /^(antilink2)$/i
+handler.group = handler.botAdmin = handler.admin = true
+handler.fail = null
+export default handler
