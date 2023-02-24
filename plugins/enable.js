@@ -206,7 +206,7 @@ const listMessage = {
       throw false
   }
   
-  conn.sendButton(m.chat, `┏•━•━━•━ ◎ ━••━•━•━•┓
+  conn.sendButton(m.chat, `┏•━•◎•━•┓
 ┣ 🔸Opzioni
 ┣─━──━─❖─━──━─ ◎
 ┣ 🔸𝚃𝚒𝚙𝚘: ${type} 
@@ -214,7 +214,7 @@ const listMessage = {
 ┣ 🔸Stato: ${isEnable ? 'Attivato ✅' : 'Disattivato ❌️'}
 ┣─━──━─❖─━──━─ ◎
 ┣ 🔸Dove: ${isAll ? 'Questo bot' : isUser ? '' : 'Questa chat'}
-┗•━•━•━━ ◎ ━•━••━•━•┛`,lb, null, [[`${isEnable ? '❌️ Disattivare' : '✅ Attivare'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['🔰Menu', `${usedPrefix}help`]],m)
+┗•━•◎•━•┛`,lb, null, [[`${isEnable ? '❌️ Disattivare' : '✅ Attivare'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['🔰Menu', `${usedPrefix}help`]],m)
 
 /*m.reply(`
 el comando *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
