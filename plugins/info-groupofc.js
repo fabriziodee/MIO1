@@ -6,14 +6,15 @@ m.reply(`
 
 *➤ GRUPPO UFFICIALE DEL BOT: MoonClouds *
 
-1) https://chat.whatsapp.com/ClCSlqMkjlHHoiDsk2Vqw
+1) https://chat.whatsapp.com/CICSIqMkjlhHHoiDsk2Vqw
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-*➤ GRUPPO SPAM:*
+*➤ GRUPPO SPAM: MoonClouds *
 
-https://chat.whatsapp.com/JiorKiJ2g3SDCt3Aln3hAO
+2)https://chat.whatsapp.com/JiorKiJ2g3SDCt3Aln3hAO
 
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 SE RITIENI POSSIBILE UNA COLLABORAZIONE NON ESITARE A CONTATTARE IL CREATORE CON IL COMANDO !owner`)
+
 
 }
 handler.help = ['support']
