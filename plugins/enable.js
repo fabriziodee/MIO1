@@ -12,7 +12,8 @@ const sections = [
 	{title: "COMANDO +18", rowId: `${usedPrefix + command} nsfw`},
 	{title: "ANTIFAKES", rowId: `${usedPrefix + command} onlylatinos`},
 	{title: "ANTILINK", rowId: `${usedPrefix + command} antilink`},
-    {title: "ANTIDELETE", rowId: `${usedPrefix + command} antidelete`},
+	{title: "ANTILINK2", rowId: `${usedPrefix + command} antilink2`},	
+        {title: "ANTIDELETE", rowId: `${usedPrefix + command} antidelete`},
 	{title: "AUTOLEVELUP", rowId: `${usedPrefix + command} autolevelup`},
 	{title: "CHATBOT", rowId: `${usedPrefix + command} simi`},
 	{title: "DECTEC", rowId: `${usedPrefix + command} detect`},
@@ -108,7 +109,17 @@ const listMessage = {
       }
       chat.antiLink = isEnable
       break
-      
+       case 'antilink2':
+    case 'antilinkwa2':
+    case 'antilinkwha2':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antiLink2 = isEnable
+      break	  
       case 'antitoxic':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
