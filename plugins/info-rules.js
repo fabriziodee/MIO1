@@ -31,14 +31,7 @@ let rules = `➯ *TIDAK SPAM BOT*
 └─┈⟅`
 let nth = `☰⟥⟝⟞⟝❨ *Rᴜʟᴇs Mʏ Bᴏᴛ* ❩⟞⟝⟞⟤☰`
 conn.send3ButtonImg(m.chat, `${pickRandom(flaaa2)}` + `${ucapan()} ` + `${name}`, nth, rules, 'Menu', '.menu', 'Owner', '.owner', 'Credit', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://wa.me/p/5489299044451325/6281387307198',
-    mediaType: 2, 
-    description: ,
-    title: "Sᴇᴡᴀ Cᴇᴋ Dɪsɪɴɪ Cᴜʏ!!!",
-    body: wm,
-    thumbnail: fs.readFileSync('./media/qr.png'),
-    sourceUrl: 'https://wa.me/p/5489299044451325/6281387307198',
-     }}
+  
   })
 }
 handler.help = ['rules']
@@ -46,24 +39,6 @@ handler.tags = ['info']
 handler.command = /^(rules)$/i
 
 export default handler
-
-function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Selamat Malam"
-  if (time >= 4) {
-    res = "Selamat Pagi"
-  }
-  if (time >= 10) {
-    res = "Selamat Siang"
-  }
-  if (time >= 15) {
-    res = "Selamat Sore"
-  }
-  if (time >= 18) {
-    res = "Selamat Malam"
-  }
-  return res
-}
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
