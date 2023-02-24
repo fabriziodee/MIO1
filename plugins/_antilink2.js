@@ -9,8 +9,6 @@ handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
   if (chat.antiLink && isGroupLink) {
     await m.reply(`*「 ANTI LINKS 」*\n*Ci vediamo piccola👋, ${await this.getName(m.sender)} hai infranto le regole verrai sterminato....!!*`)
     await m.reply(`*Hai 3 secondi per rimuovere il link e ritirare...!!!!*`)
-    await m.reply(`*3!!*`)
-    await m.reply(`*2!!*`)
     await m.reply(`*1!!*`)
     if (isAdmin) return m.reply('*Ti sei salvato, sei un amministratore, non posso cancellarti*')
     if (!isBotAdmin) return m.reply('*Il bot non è amministratore, non può sterminare le persone*')
