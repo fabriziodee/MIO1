@@ -1,7 +1,7 @@
 import { performance } from 'perf_hooks'
 let handler = async (m, { conn, text }) => {
 await delay(5 * 5000)
-let start = `*😱 ¡¡Iniziando DOX non spegnere il cmd!! 😱*`
+let start = `*😱 Iniziando DOX non spegnere il DEVICE 😱*`
 let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
 let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
 let boost3 = `*${pickRandom(['41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60'])}%*`
@@ -46,7 +46,7 @@ let neww = performance.now()
 let speed = `${neww - old}`
 let doxeo = `*✅Persona hackerata, invio dati sensibili in pvt*\n\n*Tempo: ${speed} Secondi!*
 
-*𝑹𝒆𝒔𝒖𝒍𝒕𝒂𝒅𝒐𝒔:*
+*Risultato:*
 
 *Nome:* ${text}
 *Ip:* ${ip}
