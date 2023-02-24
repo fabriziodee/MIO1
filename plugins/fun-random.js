@@ -1,7 +1,7 @@
 let handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) => {
 
 if (!text) throw `uso corretto:
-${usedPrefix + command} il più Unlimited`
+${usedPrefix + command} è il vero UNLIMITED`
 let em = ['😀','😂','🍑','😍','🤤','🥵','😐','🙂','😎','👻','💩','🥴','🤑','🤓']
 
     let toM = a => '@' + a.split('@')[0]
