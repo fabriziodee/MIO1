@@ -8,7 +8,7 @@ let em = ['😀','😂','🍑','😍','🤤','🥵','😐','🙂','😎','👻',
     let ps = groupMetadata.participants.map(v => v.id)
     let a = ps.getRandom()
     let am = em.getRandom()
-   await conn.sendButton(m.chat, `${toM(a)} *${text}*${am}`, author, null, [['Scova Altro Unli', '.random ' + text]], m,{mentions: [a]})
+   await conn.sendButton(m.chat, `${toM(a)} *${text}*${am}`, author, null, [['Scova Altro', '.random ' + text]], m,{mentions: [a]})
     
 }
 
