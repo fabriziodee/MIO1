@@ -6,7 +6,7 @@ handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
   let chat = global.DATABASE.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
-  if (chat.antiLink2 && isGroupLink) {
+  if (chat.antiLink && isGroupLink) {
     await m.reply(`*「 ANTI LINKS 」*\n*Hasta la vista baby👋, ${await this.getName(m.sender)} rompiste las reglas serás exterminado....!!*`)
     await m.reply(`*Tienes 3 segundos para eliminar el link y retractarte...!!!!*`)
     await m.reply(`*3!!*`)
