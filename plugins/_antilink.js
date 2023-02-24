@@ -1,5 +1,6 @@
 
 const linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
+const linkRegex = /https:/i
 
 export async function before(m, {conn, isAdmin, isBotAdmin }) {
     if (m.isBaileys && m.fromMe)
@@ -14,7 +15,11 @@ export async function before(m, {conn, isAdmin, isBotAdmin }) {
             const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.reply(m.chat, `ANTILINK\nɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇ ᴇɴʟᴀᴄᴇ ᴅᴇʟ ᴏᴛʀᴏ ɢʀᴜᴘᴏs\nsᴇʀᴀ ᴇxᴘᴜʟsᴀᴅᴏ ᴅᴇʟ ɢʀᴜᴘᴏ @${m.sender.split('@')[0]} ${isBotAdmin ? '' : '\n\nte salvarte cago no soy admin no puedo eliminarte :"v'}`, null, { mentions: [m.sender] } )
+    await m.reply(`*「 ANTI LINKS 」*\n*Ci vediamo piccola👋, ${await this.getName(m.sender)} hai infranto le regole verrai sterminato....!!*`)
+    await m.reply(`*Hai 3 secondi per rimuovere il link e ritirare...!!!!*`)
+    await m.reply(`*1!!*`)
+    if (isAdmin) return m.reply('*Ti sei salvato, sei un amministratore, non posso cancellarti*')
+    if (!isBotAdmin) return m.reply('*Il bot non 
         if (isBotAdmin && chat.antiLink) {
         	await conn.sendMessage(m.chat, { delete: m.key })
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
