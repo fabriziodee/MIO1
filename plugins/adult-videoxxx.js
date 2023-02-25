@@ -1,6 +1,5 @@
 let handler  = async (m, { conn, usedPrefix, command }) => {
  {await m.reply('⌛ _prendi i fazzoletti.._\n▰▰▰▱▱▱▱▱▱')}
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '*[❗] chiama un admin per aiuto*'   
 let res = pickRandom(asupan)
 conn.sendHydrated(m.chat, null, null, res, null, null, null, null, [['🔄 ancora 🔄', `/${command}`]], m)}
 handler.help = ['videoxxx']
