@@ -6,21 +6,26 @@ const sections = [
    {
     title: `BOT INFORMATION`,
 	rows: [
-    {title: "DONASI", rowId: 'zdonasi' },
-    {title: "SEWA/PREMIUM", rowId: 'zsewa'},
-	{title: "STORE", rowId: '.zstore'},
+    {title: "MENU", rowId: 'zmenu' },
+    {title: "SEWA/PREMIUM", rowId: 'zlistprem'},
+	{title: "ATTIVO DA", rowId: 'zuptime'},
 	{title: "OWNER", rowId: 'zowner'},
-	{title: "SPEED", rowId: 'zspeed'},
+	{title: "SPEED", rowId: 'zping'},
+	{title: "GRUPPI", rowId: 'zgrupos'},	
 	]
     }, 
     
 ]
 
 const listMessage = {
-  text: info,
-  footer: '',
+  text: `*~ HEYY*${taguser}`, footer: `
+╭┄〔 ≪ •🌐• ≫ 〕┄⊱
+┆*ora:* ${time}    
+┆*attivato da:* ${uptime}
+┆*versione del bot:* ${vs}
+*superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
   title: null,
-  buttonText: "Tap Here!",
+  buttonText: "Premi Qui!",
   sections
 }
 await conn.sendMessage(m.chat, listMessage, { quoted: m})
