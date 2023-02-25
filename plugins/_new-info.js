@@ -17,16 +17,17 @@ const sections = [
     
 ]
 
+let name = await conn.getName(m.sender)
 const listMessage = {
-  text: `*~ HEYY*${taguser}`, footer: `
+text: `*~ HEYY*`, footer: `
 ╭┄〔 ≪ •🌐• ≫ 〕┄⊱
 ┆*ora:* ${time}    
 ┆*attivato da:* ${uptime}
 ┆*versione del bot:* ${vs}
 *superfabriʙᴏᴛ-ᴍᴅ ✨*`, pp,
-  title: null,
-  buttonText: "Premi Qui!",
-  sections
+title: null,
+buttonText: "APRI IL MENU", 
+sections }
 }
 await conn.sendMessage(m.chat, listMessage, { quoted: m})
 //conn.sendHydrated(m.chat, info, wm, null, sgc, "ðŸŒŽ Group Official", null,null, [['Owner','.owner']], m)
