@@ -11,4 +11,5 @@ m.reply(`${hasil.result}`.trim())
 throw `*[❗] PARLA ITALIANO IDIOTA!`
 }}
 handler.rowner = true 
+handler.command = false
 export default handler
