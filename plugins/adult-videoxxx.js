@@ -1,17 +1,17 @@
-let handler  = async (m, { conn, usedPrefix, command }) => {
- {await m.reply('⌛ _prendi i fazzoletti.._\n▰▰▰▱▱▱▱▱▱')}
-let res = pickRandom(asupan)
-conn.sendHydrated(m.chat, null, null, res, null, null, null, null, [['🔄 ancora 🔄', `/${command}`]], m)}
-handler.help = ['videoxxx']
-handler.tags = ['random']
-handler.command = /^xxx|vídeoxxx$/i
-
+import fetch from 'node-fetch'
+let handler = async (m, { conn, command }) => {
+ {await m.reply('⌛ Mi sto spogliando per te..')}
+let url = packgirl2[Math.floor(Math.random() * packgirl2.length)]
+conn.sendButton(m.chat, `_🥵 Pack 2 🥵_`, author, url, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], m)
+}
+handler.help = ['xxx']
+handler.tags = ['internet']
+handler.command = /^(xxx)$/i
+handler.limit = 4
 export default handler
 
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]}
 
-const asupan = [
+global.packgirl2 = [
 "https://l.top4top.io/m_2235dduf01.mp4",
 "https://a.top4top.io/m_2235268m61.mp4",
 "https://b.top4top.io/m_2235k7hze2.mp4",
