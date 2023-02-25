@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-let handler = async (m, { text, usedPrefix, command }) => {
+let handler = async (m, { text, args, isROwner }) => {
 if (!text) throw `*❗FAMMI UNA DOMANDA O UNA RICHIESTA O DAMMI ORDINE*\n\n*—◉ ESEMPIO*\n*◉ ${usedPrefix + command} COSA PENSI SULL AMORE?*\n*◉ ${usedPrefix + command}*`
 try {
 m.reply('*⏳ CI STO PENSANDO ⏳*')
@@ -10,5 +10,5 @@ m.reply(`${hasil.result}`.trim())
 } catch {
 throw `*[❗] PARLA ITALIANO IDIOTA!`
 }}
-handler.command = ['openai', 'chatgpt', 'ia', 'io']
+handler.rowner = true 
 export default handler
