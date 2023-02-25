@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
 let info = `
-*${htki} INFO BOT ${htka}*
+ INFO BOT
 `
 const sections = [
    {
