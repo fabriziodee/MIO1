@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-let handler = async (m, { text, args, isOwner }) => {
+let handler = async (m, { text }) => {
 if (!text) throw `*❗FAMMI UNA DOMANDA O UNA RICHIESTA O DAMMI ORDINE*\n\n*—◉ ESEMPIO*\n*◉ ${usedPrefix + command} COSA PENSI SULL AMORE?*\n*◉ ${usedPrefix + command}*`
 try {
 m.reply('*⏳ CI STO PENSANDO ⏳*')
