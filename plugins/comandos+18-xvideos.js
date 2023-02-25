@@ -1,7 +1,7 @@
 //Creditos https://github.com/BrunoSobrino
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args, command, usedPrefix }) => {
-if (!args[0]) throw `${mg}𝙐𝙎𝙀 𝙐𝙉 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙓𝙑𝙄𝘿𝙀𝙊𝙎\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n* ${usedPrefix + command} https://www.xvideos.com/video70389849/pequena_zorra_follada_duro*`
+if (!args[0]) throw `𝙐𝙎𝙀 𝙐𝙉 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙓𝙑𝙄𝘿𝙀𝙊𝙎\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n* ${usedPrefix + command} https://www.xvideos.com/video70389849/pequena_zorra_follada_duro*`
 try {
 await delay(6000)
 await conn.reply(m.chat, '➤ 𝙀𝙎𝙋𝙀𝙍𝙀 𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘼 𝙌𝙐𝙀 𝙎𝙀 𝙀𝙉𝙑𝙄𝙀 𝙀𝙇 𝙑𝙄𝘿𝙀𝙊', m)
