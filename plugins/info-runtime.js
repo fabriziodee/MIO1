@@ -15,7 +15,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
           let ssd = child.replace(/Memory:/, "Ram:");
     }
     let muptime = clockString (_muptime)
-   m.reply(`*⌛Hey fra sono attivo da*' \n\n${muptime}`)(m.reply(`${ssd}🚀 *Velocità* : ${'latensi.toFixed(4)} _ms_`);
+   m.reply(`*⌛Hey fra sono attivo da*' \n\n${muptime}`
+	   * '*[🔋] Bᴀᴛᴇʀɪᴀ:* *${conn.battery ? `${conn.battery.value}%* *${conn.battery.live ? '🔌 'Cᴀʀɢᴀɴᴅᴏ...*' : '⚡ Dᴇsᴄᴏɴᴇᴄᴛᴀᴅᴏ*'}` : 'Dᴇsᴄᴏɴᴏᴄɪᴅᴏ*'}
 }
 handler.help = ['runtime']
 handler.tags = ['main']
