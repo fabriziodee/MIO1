@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-let handler = async (m, { text, args, isROwner }) => {
+let handler = async (m, { text, args, isOwner }) => {
 if (!text) throw `*❗FAMMI UNA DOMANDA O UNA RICHIESTA O DAMMI ORDINE*\n\n*—◉ ESEMPIO*\n*◉ ${usedPrefix + command} COSA PENSI SULL AMORE?*\n*◉ ${usedPrefix + command}*`
 try {
 m.reply('*⏳ CI STO PENSANDO ⏳*')
@@ -10,6 +10,6 @@ m.reply(`${hasil.result}`.trim())
 } catch {
 throw `*[❗] PARLA ITALIANO IDIOTA!`
 }}
-handler.rowner = true 
-handler.command = false
+handler.owner = true 
+handler.register = true 
 export default handler
