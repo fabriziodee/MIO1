@@ -1,21 +1,18 @@
-import cp from 'child_process'
-import { promisify } from 'util'
-let exec = promisify(cp.exec).bind(cp)
-let handler = async (m) => {
-	await conn.reply(m.chat, wait, m)
-    let o
-    try {
-        o = await exec('python speed.py')
-    } catch (e) {
-        o = e
-    } finally {
-        let { stdout, stderr } = o
-        if (stdout.trim()) m.reply(stdout)
-        if (stderr.trim()) m.reply(stderr)
-    }
+import speed from 'performance-now'
+import { spawn, exec, execSync } from 'child_process'
+
+let handler = async (m, { conn }) => {
+         let timestamp = speed();
+         let latensi = speed() - timestamp;
+         exec(`neofetch --stdout`, (error, stdout, stderr) => {
+          let child = stdout.toString("utf-8");
+          let ssd = child.replace(/Memory:/, "Ram:");
+          m.reply(`${ssd}🚀 *Velocidad* : ${latensi.toFixed(4)} _ms_`);
+            });
 }
-handler.help = ['testspeed']
-handler.tags = ['info']
-handler.command = /^(ping)$/i
+handler.help = ['ping']
+handler.tags = ['main']
+handler.command = ['ping', 'speed']
+handler.register = true
 
 export default handler
