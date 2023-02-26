@@ -50,11 +50,11 @@ await conn.reply(m.chat, (pesan))
  }
 handler.help = ['spamchat'].map(v => v + ' *<texto>*')
 handler.tags = ['tools']
-handler.command = /^(spam)$/i
+handler.command = ['spam']
 
 handler.fail = null
 handler.exp = 100
 handler.limit = true
-handler.rowner = true
+handler.owner = true
 
 export default handler
