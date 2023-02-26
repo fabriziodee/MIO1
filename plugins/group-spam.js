@@ -3,7 +3,7 @@ let handler = async(m, { conn, text, participants }) => {
     if (!text) return conn.reply(m.chat, 'Inserisci il testo da spammare!', m)
 
     let pesan = `${text}`
-    await m.reply('*SPAM INIZIATO!*\n\nNota: il bot invierà spam 30 volte')
+    await m.reply(m.users,'*SPAM INIZIATO!*\n\nNota: il bot invierà spam 30 volte')
     await m.reply(pesan)
     await m.reply(pesan)
     await m.reply(pesan)
