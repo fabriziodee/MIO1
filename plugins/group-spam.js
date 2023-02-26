@@ -1,18 +1,4 @@
 let handler = async (m, { conn, text, participants, isOwner }) => {
-try {  
-let users = participants.map(u => conn.decodeJid(u.id))
-let q = m.quoted ? m.quoted : m || m.text || m.sender
-let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
-let msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, { [m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : { text: '' || c }}, { quoted: m, userJid: conn.user.id }), text || q.text, conn.user.jid, { mentions: users })
-await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
-
-} catch {  
-
-let users = participants.map(u => conn.decodeJid(u.id))
-let quoted = m.quoted ? m.quoted : m
-let mime = (quoted.msg || quoted).mimetype || ''
-let more = String.fromCharCode(8206)
-let masss = more.repeat(850)
    
     if (!text) return conn.reply(m.chat, 'Inserisci il testo da spammare!', m)
 
