@@ -8,8 +8,6 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
     let bot = global.db.data.settings[this.user.jid] || {}
     const isAntiVirtex = isVirtex.exec(m.text)
     
-    if (chat.antiVirtex && isAntiVirtex) {
-    
     let regs = /(ผิดุท้เึางืผิดุท้เึางื)/i
    let isVertexThai = regs.exec(m.text)
    if (isVertexThai && !m.fromMe) {
