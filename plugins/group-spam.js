@@ -37,10 +37,19 @@ let handler = async(m, { conn, text }) => {
     conn.reply(m.chat, '📮Fine dello spam', m)
 }
 handler.help = ['groupspam'].map(v => v + ' <teks>')
-handler.tags = ['owner']
-handler.command = /^(gpspam)$/i
+handler.tags = ['group']
+handler.command = /^(gps)$/i
 handler.owner = true
 handler.mods = false
+handler.premium = false
 handler.group = true
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+handler.exp = 100
+handler.limit = false
 
 export default handler 
