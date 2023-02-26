@@ -8,10 +8,6 @@ await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 
 } catch {  
 
-/**
-[ By @NeKosmic || https://github.com/NeKosmic/ ]
-**/  
-    
 let users = participants.map(u => conn.decodeJid(u.id))
 let quoted = m.quoted ? m.quoted : m
 let mime = (quoted.msg || quoted).mimetype || ''
