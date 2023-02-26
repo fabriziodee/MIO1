@@ -53,8 +53,6 @@ handler.tags = ['tools']
 handler.command = ['spam']
 
 handler.fail = null
-handler.exp = 100
-handler.limit = true
 handler.owner = true
 
 export default handler
