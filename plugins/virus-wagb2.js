@@ -31,7 +31,7 @@ let tm = {
 text: text,
 footer: global.wm,
 templateButtons: templateButtons,
-image: {url: fla + 'Donasi'}
+image: {url: 'Donasi'}
 }
 conn.sendMessage(m.chat, tm, m)
 }
