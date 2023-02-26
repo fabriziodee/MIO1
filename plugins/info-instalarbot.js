@@ -8,6 +8,6 @@ USA IL COMANDO !owner PER CONTATTARMI
 
 
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
-handler.command = /^(installabot|instalarbot)$/i
+handler.command = ['install']
 handler.register = true
 export default handler
