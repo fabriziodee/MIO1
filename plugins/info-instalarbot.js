@@ -27,7 +27,6 @@ let texto1 = `
  |
  |
 let buttonMessage= {
-'document': { url: `https://youtu.be/|` },
 'mimetype': `application/${document}`,
 'fileName': `-𝑴𝑫`,
 'fileLength': 99999999999999,
