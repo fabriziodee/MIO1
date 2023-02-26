@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
-let text = `${htki} *DOWNLOAD* ${htka}
+let text = ` *DOWNLOAD* 
      WhatsApp GB 🈲
      Pasword: dickynews
     
