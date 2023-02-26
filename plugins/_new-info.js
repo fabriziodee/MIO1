@@ -8,7 +8,7 @@ const sections = [
 	rows: [
     {title: "MENU", rowId: 'zmenu' },
     {title: "SEWA/PREMIUM", rowId: 'zlistprem'},
-	{title: "ATTIVO DA", rowId: 'zuptime'},
+	{title: "ATTIVO DA", rowId: 'zruntime'},
 	{title: "OWNER", rowId: 'zowner'},
 	{title: "SPEED", rowId: 'zping'},
 	{title: "GRUPPI", rowId: 'zgrupos'},	
