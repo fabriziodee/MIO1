@@ -7,16 +7,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       _muptime = await new Promise(resolve => {
         process.once('message', resolve)
         setTimeout(resolve, 1000)
-      ) * 1000 
-         let timestamp = speed();
-         let latensi = speed() - timestamp;
-         exec(`neofetch --stdout`, (error, stdout, stderr) => {
-          let child = stdout.toString("utf-8");
-          let ssd = child.replace(/Memory:/, "Ram:");
+      }) * 1000
     }
-    let muptime = clockString (_muptime)
-   m.reply(`*⌛Hey fra sono attivo da*' \n\n${muptime}`
-	   * '*[🔋] Bᴀᴛᴇʀɪᴀ:* *${conn.battery ? `${conn.battery.value}%* *${conn.battery.live ? '🔌 'Cᴀʀɢᴀɴᴅᴏ...*' : '⚡ Dᴇsᴄᴏɴᴇᴄᴛᴀᴅᴏ*'}` : 'Dᴇsᴄᴏɴᴏᴄɪᴅᴏ*'}
+    let muptime = clockString(_muptime)
+   m.reply(`*⌛HEY SONO ATTIVO DA:*  \n\n${muptime}`) 
 }
 handler.help = ['runtime']
 handler.tags = ['main']
@@ -30,6 +24,3 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [d, ' dias ', h, ' hs ', m, ' min ', s, ' seg '].map(v => v.toString().padStart(2, 0)).join('')
-}
-
-export default handler
