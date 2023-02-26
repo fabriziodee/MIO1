@@ -33,7 +33,6 @@ let handler = async(m, { conn, text, participants }) => {
     await m.reply(pesan)
     await m.reply(pesan)
     await m.reply(pesan)
-    await m.reply(pesan)
 
     conn.reply(m.chat, '📮Fine dello spam', m)
 }
