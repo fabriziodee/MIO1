@@ -10,14 +10,17 @@ await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 
 } catch {  
 
-
+/**
+[ By @NeKosmic || https://github.com/NeKosmic/ ]
+**/  
+    
 let users = participants.map(u => conn.decodeJid(u.id))
 let quoted = m.quoted ? m.quoted : m
 let mime = (quoted.msg || quoted).mimetype || ''
 let isMedia = /image|video|sticker|audio/.test(mime)
 let more = String.fromCharCode(8206)
 let masss = more.repeat(850)
-let htextos = `${text ? text : "*Sveglia!*"}`
+let htextos = `${text ? text : "*oh cazzo hidetagghi!?*"}`
 if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos, mentions: users }, { quoted: m })
@@ -31,9 +34,9 @@ conn.sendMessage(m.chat, { audio: mediax, mentions: users, mimetype: 'audio/mp4'
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, { quoted: m })
 } else {
+await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail:'', sourceUrl: 'https://instagram.com/_Fabri115' }}}}}, {})
 }}}
 handler.command = /^(hidetag|oh|notify)$/i
 handler.group = true
 handler.admin = true
-handler.limit = 1
 export default handler
