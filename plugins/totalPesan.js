@@ -16,6 +16,6 @@ let handler = async (m, { conn }) => {
 handler.help = ['totalpesan']
 handler.tags = ['group']
 
-handler.command = /^totalpesan$/i
+handler.command = ['msg']
 
 module.exports = handler
