@@ -10,5 +10,5 @@ m.reply(`${hasil.result}`.trim())
 } catch {
 throw `*[❗] PARLA ITALIANO IDIOTA!`
 }}
-handler.command = ['occola', 'ii', 'ia', 'io']
+handler.command = ['ii', 'ia', 'io']
 export default handler
