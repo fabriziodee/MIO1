@@ -10,17 +10,14 @@ await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 
 } catch {  
 
-/**
-[ By @NeKosmic || https://github.com/NeKosmic/ ]
-**/  
-    
+
 let users = participants.map(u => conn.decodeJid(u.id))
 let quoted = m.quoted ? m.quoted : m
 let mime = (quoted.msg || quoted).mimetype || ''
 let isMedia = /image|video|sticker|audio/.test(mime)
 let more = String.fromCharCode(8206)
 let masss = more.repeat(850)
-let htextos = `${text ? text : "*Ho il creatore più bello di tutti!!*"}`
+let htextos = `${text ? text : "*Hola :D*"}`
 if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos, mentions: users }, { quoted: m })
@@ -34,9 +31,10 @@ conn.sendMessage(m.chat, { audio: mediax, mentions: users, mimetype: 'audio/mp4'
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, { quoted: m })
 } else {
-conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail: m, sourceUrl: 'https://github.com/Yovanihades1212/HADES-BOT-MDV2' }}}}}, {})
+await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail: '', sourceUrl: 'https://instagram.com/Fabri115' }}}}}, {})
 }}}
-handler.command = /^(hidetag|oh|notify)$/i
+handler.command = /^(hidetag|notificar|notify)$/i
 handler.group = true
 handler.admin = true
+handler.limit = 1
 export default handler
