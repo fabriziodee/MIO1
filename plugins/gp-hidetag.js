@@ -20,7 +20,7 @@ let mime = (quoted.msg || quoted).mimetype || ''
 let isMedia = /image|video|sticker|audio/.test(mime)
 let more = String.fromCharCode(8206)
 let masss = more.repeat(850)
-let htextos = `${text ? text : "*oh cazzo hidetagghi!?*"}`
+let htextos = `${text ? text : "*Oh cazzo hidetagghi!?* | *Con la scusa seguimi..*"}`
 if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos, mentions: users }, { quoted: m })
@@ -36,7 +36,7 @@ conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, { quoted: m })
 } else {
 await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail:'', sourceUrl: 'https://instagram.com/_Fabri115' }}}}}, {})
 }}}
-handler.command = /^(hidetag|oh|notify)$/i
+handler.command = /^(hidetag|oh|urla)$/i
 handler.group = true
 handler.admin = true
 export default handler
