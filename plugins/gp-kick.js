@@ -13,7 +13,7 @@ m.reply(`✅ Utente eliminato`)
 
 handler.help = ['kick @user']
 handler.tags = ['group']
-handler.command = ['kick', 'via'] 
+handler.command = ['kick', 'via', 'supervia'] 
 handler.admin = true
 handler.group = true
 handler.botAdmin = true
