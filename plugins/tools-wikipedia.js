@@ -3,10 +3,10 @@ import cheerio from 'cheerio'
 
 
 let handler = async (m, { text }) => {
-	if (!text) throw `✳️ Ingrese lo que quiere buscar en Wikipedia` 
+	if (!text) throw `✳️ Cosa vuoi cercare discepolo?` 
 	
     try {
-	const link =  await axios.get(`https://es.wikipedia.org/wiki/${text}`)
+	const link =  await axios.get(`https://it.wikipedia.org/wiki/${text}`)
 	const $ = cheerio.load(link.data)
 	let wik = $('#firstHeading').text().trim()
 	let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
@@ -16,7 +16,7 @@ let handler = async (m, { text }) => {
 
 ${resulw}`)
 } catch (e) {
-  m.reply('⚠️ No se han encontrado resultados ')
+  m.reply('⚠️ Questo è troppo per SUPERFABRI ')
 }
 }
 handler.help = ['wikipedia']
