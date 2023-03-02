@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/fabriziodee/Nova.git",
+    "homepage": "https://github.com/fabriziodee/superbot2023",
     "author": {
         "name": "fabriziodee"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fabriziodee/Nova.git"
+        "url": "https://github.com/fabriziodee/superbot2023"
     },
     "bugs": {
-        "url": "https://github.com/fabriziodee/Nova/issues"
+        "url": "https://github.com/fabriziodee/superbot2023issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
