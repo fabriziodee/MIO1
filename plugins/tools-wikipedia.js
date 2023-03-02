@@ -10,9 +10,9 @@ let handler = async (m, { text }) => {
 	const $ = cheerio.load(link.data)
 	let wik = $('#firstHeading').text().trim()
 	let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
-	m.reply(`▢ *Wikipedia*
+	m.reply(`▢ *La mente di SuperFabri*
 
-‣ Buscado : ${wik}
+‣ Trovato contenuto per : ${wik}
 
 ${resulw}`)
 } catch (e) {
