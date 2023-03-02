@@ -149,7 +149,7 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
 
-handler.command = /^(ping|speed|info)$/i
+handler.command = /^(ping0|i)$/i
 export default handler
 
 const more = String.fromCharCode(8206)
