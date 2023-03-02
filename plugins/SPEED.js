@@ -7,7 +7,6 @@ handler.tags = ['main']
 handler.command = ['ping22', 'speed22']
 handler.register = true
 
-export default handler
 async execute(m) {
 let { conn } = data
 let groups = conn.chats.array.filter(v => v.jid.endsWith('g.us'))
