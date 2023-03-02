@@ -3,10 +3,10 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['393518398856', 'SUPERFABRI', true],
-  ['393519369828', 'MINIANGE', true],
-  ['393280552394', 'ACHISOAVE', true],
-  ['33760536110', 'INVINCIBILEDANI', true],
+  ['393518398856', 'Ŧค๒гเ' true],
+  ['393519369828', 'คภɠє', true],
+  ['393280552394', 'คςђเ', true],
+  ['33760536110', '๔คภเ', true],
   ['393518398856']
 ] //Numeros de owner 
 
@@ -57,7 +57,7 @@ global.author = 'SUPERFABRIBOT-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.fgig = 'https://github.com/fabriziodee/Nova'
+global.fgig = 'https://github.com/fabriziodee/superbot2023'
  
 global.yt = ''
 
