@@ -2,12 +2,12 @@ const speed = global.Ft['speed']
 const os = global.Ft['os']
 const fetch = require('node-fetch')
 
-module.exports = {
-name: ["stats"],
-type: ['default'],
-description: "melihat kecepatan respon bot",
-utilisation: global.userbot.prefix+ "ping2",
+handler.help = ['ping']
+handler.tags = ['main']
+handler.command = ['ping22', 'speed22']
+handler.register = true
 
+export default handler
 async execute(m) {
 let { conn } = data
 let groups = conn.chats.array.filter(v => v.jid.endsWith('g.us'))
