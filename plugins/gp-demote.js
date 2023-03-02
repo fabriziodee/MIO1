@@ -20,7 +20,7 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-m.reply(`✅ ᴇʟ ᴜsᴜᴀʀɪᴏ ғᴜᴇ ǫᴜɪᴛᴀᴅᴏ ᴅᴇʟ ᴀᴅᴍɪɴ`)
+m.reply(`✅ FRA ABBIAMO DECISO DI TOGLIERTI L ADMIN`)
 }
 }
 handler.help = ['demote (@tag)']
