@@ -578,7 +578,7 @@ global.dfail = (type, m, conn) => {
         unreg: '🔴🌑Hey non sei registrato 🌑🔴\nper utilizzare il bot devi registrarti:Chiedi al mio creatore (prefix)owner\n\n*',
         restrict: '🔐🌑 ahahah il comando è disattivato'
     }[type]
-    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['Ci ho provato', '.Ci ho provato'] ], m)
+    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['Sono scemo/a', '.Ci ho provato'] ], m)
 }
 
 let file = global.__filename(import.meta.url, true)
