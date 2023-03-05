@@ -6,7 +6,7 @@ m.reply(`
 
 *➤ GRUPPO UFFICIALE DEL BOT: 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⟿ꪶ͢𝑴☁⃟ᬽ *
 
-1) https://chat.whatsapp.com/K1IPit7Ceo3EkzV3QpQctQ
+1) https://chat.whatsapp.com/K1lPit7Ceo3EkzV3QpQctQ
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 *➤ GRUPPO SPAM 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔 *
 
