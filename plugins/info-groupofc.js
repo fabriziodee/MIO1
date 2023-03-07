@@ -4,8 +4,14 @@ let handler = async (m, { conn }) => {
 m.reply(`
 *HEY CARO SFRUTTATORE DI SUPERFABRIBOT TI ELENCO IL GRUPPO UFFICIALE*
 
-*➤ GRUPPO UFFICIALE DEL BOT: 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⟿ꪶ͢𝑴☁⃟ᬽ *
+*➤ GRUPPO UFFICIALE DEL BOT:* 
 
+*ꪶ͢𝐅𝐈𝐗𝐄𝐃📛 ꪶ͢𝑴☁⃟ᬽ*
+2) https://chat.whatsapp.com/IXUpI1rQzNoAHsnBpfHtgV
+
+*➤ GRUPPO UFFICIALE DEL BOT:* 
+
+*𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⟿ꪶ͢𝑴☁⃟ᬽ nella vana speranza, riapra*
 1) https://chat.whatsapp.com/K1lPit7Ceo3EkzV3QpQctQ
 ┈┈┈┈┈┈┈┈┈┈┈┈
 *➤ GRUPPO SPAM 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔 *
