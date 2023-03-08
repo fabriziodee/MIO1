@@ -5,15 +5,15 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }[(args[0] || '')]
     if (isClose === undefined)
         throw `
-*✳️ ELIGIR UNA OPCIÓN*
-  *🔸️ ${usedPrefix + command} close*
-  *🔸️ ${usedPrefix + command} open*
+*✳️ DECICI UNA CAZZO DI OPZIONE*
+  *🔸️ ${usedPrefix + command} Chiuso*
+  *🔸️ ${usedPrefix + command} Aperto*
 `.trim()
     await conn.groupSettingUpdate(m.chat, isClose)
 }
-handler.help = ['group *open/close*']
+handler.help = ['gruppo *aperto/chiuso*']
 handler.tags = ['group']
-handler.command = ['group', 'grupo'] 
+handler.command = ['gruppo', 'grupo'] 
 handler.admin = true
 handler.botAdmin = true
 handler.register = true
